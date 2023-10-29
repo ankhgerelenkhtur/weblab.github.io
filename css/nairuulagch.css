@@ -1,0 +1,102 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0E0C0C;
+    color: white;
+}
+
+.container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 64px;
+}
+
+.directorinfo {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.directorinfo h3 {
+    margin-right: 30px;
+}
+
+.topdirector .topdirectorinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.topdirector .topdirectorinfo img {
+    margin-bottom: 20px;
+}
+
+.topdirector .topdirectorinfo .topdirector-name {
+    align-self: center;
+}
+
+.dirmovies {
+    display: flex;
+    flex-direction: column;
+}
+
+.dirmovies h2{
+    align-self: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.dirmovie {
+    display: flex;
+    gap: 32px;
+
+}
+
+.dirmovies .dirawards{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    align-self: center;
+}
+
+.glowing-border {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 10px #fff;
+    border-color: blue;
+      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 
+                  0 0 50px #ff4da6, 0 0 60px #ff4da6, 
+                  inset -10px -10px -20px rgba(255,255,255,.2),
+                  inset -2px -2px -5px rgba(255,255,255,.2);
+}
+
+.reklam3 {
+background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0.00) 100%),
+                    linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0.00) 104.97%);
+display: flex;
+justify-content: space-between;
+}
+
+.reklam-text {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.click-text {
+    display: flex;
+    align-items: center
+}
+
+.shining-border {
+    position: relative;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(90deg, transparent, #00f, transparent);
+    border-image-slice: 1;
+    font-size: 24px;
+}

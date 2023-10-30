@@ -1,0 +1,94 @@
+body {
+  background-color: #000;
+}
+
+nav ul{
+list-style-type: none;
+display: flex;
+width: 1375px;
+height: 54px;
+max-width: 1728px;
+padding: 0px 15px;
+justify-content: space-between;
+align-items: center;
+position: absolute;
+right: -15px;
+top: 50px;
+border-radius: 10px;
+background: rgba(50, 50, 50, 0.21);
+margin-right: 25px;
+margin-top: 0px;
+}
+.navlogo1{
+    margin-left: 25px;
+}
+.backgroundimg{
+   width: 100%;
+   height: 100%;
+}
+.register{
+display: flex;
+width: 88px;
+height: 30px;
+padding: 8px 16px 5.39px 16px;
+flex-direction: column;
+align-items: center;
+border-radius: 24px;
+border: 1px solid #0B4FFE;
+background: rgba(0, 0, 0, 0.00);
+box-shadow: 0px 0px 0px 1px #0768AF inset;
+color: #D7E7FF;
+text-align: center;
+font-family: Arial;
+font-size: 12.25px;
+font-style: normal;
+font-weight: 400;
+line-height: 15.4px; /* 125.714% */
+text-transform: uppercase;
+}
+
+.poster1{
+border-radius: 5px;
+border-bottom: 110px solid rgba(0, 0, 0, 0.80);
+width: 323px;
+height: 350px;
+background: url(/image/poster.jpeg), lightgray 50% / cover no-repeat;
+box-shadow: 0px 4px 32px 0px #F00;
+object-fit: contain;
+}
+.buttons{
+display: flex;
+width: 140px;
+height: 50px;
+padding: 15px 16.81px 15px 16.8px;
+justify-content: space-between;
+align-items: flex-start;
+flex-shrink: 0;
+}
+.reklam3 {
+    background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0.00) 100%),
+                        linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0.00) 104.97%);
+    display: flex;
+    justify-content: space-between;
+    }
+    .reklam-text {
+        
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+}
+    
+    .click-text {
+        display: flex;
+        align-items: center
+}
+    
+    .shining-border {
+        position: relative;
+        border-top: 3px solid transparent;
+        border-image: linear-gradient(90deg, transparent, #00f, transparent);
+        border-image-slice: 1;
+        font-size: 24px;
+    }

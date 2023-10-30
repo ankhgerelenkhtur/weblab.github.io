@@ -9,17 +9,18 @@ body {
     color: white;
 }
 
-header a button  {
-display: flex;
-width: 129px;
-height: 35px;
-padding: 9px 27.882px 10px 27.118px;
-justify-content: center;
-align-items: center;
-border-radius: 12px;
-flex-shrink: 0;
+footer a  button {
+    border-radius: 4px;
+    border: 1px rgba(0, 56, 255, 0.17);
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 0px 0px 1px blue inset;
+    color: #fff;
+    margin-top:  20px;
+    margin-left: 20px;
+    height: 20px;
+    width: 48px;
 }
-
+ 
 
 .container {
     margin-top: 16px;
@@ -59,7 +60,7 @@ flex-shrink: 0;
 .dirmovies h2{
     align-self: center;
     margin-bottom: 40px;
-    margin-top: 20px;
+    margin-top: 4px;
 }
 
 .dirmovie {
@@ -69,20 +70,27 @@ flex-shrink: 0;
 }
 
 .dirmovies .dirawards{
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     align-self: center;
 }
 
-.glowing-border {
-    border: 2px solid #fff;
-    border-radius: 7px;
-    box-shadow: 0 0 10px #fff;
-    border-color: blue;
-      box-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 
-                  0 0 50px #ff4da6, 0 0 60px #ff4da6, 
-                  inset -10px -10px -20px rgba(255,255,255,.2),
-                  inset -2px -2px -5px rgba(255,255,255,.2);
+.glowing-border1 {
+    border-radius: 4px;
+    background: url(<path-to-image>), lightgray 36% / cover no-repeat;
+    box-shadow: 0px 4px 12px 0px #0B4FFE;
+}
+
+.glowing-border2 {
+    border-radius: 4px;
+    background: url(<path-to-image>), lightgray 36% / cover no-repeat;
+    box-shadow: 0px 4px 12px 0px #FFF;
+}
+
+.glowing-border3 {
+    border-radius: 4px;
+    background: url(<path-to-image>), lightgray 36% / cover no-repeat;
+    box-shadow: 0px 4px 12px 0px #FFB800;
 }
 
 .reklam3 {

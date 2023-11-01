@@ -1,6 +1,40 @@
 body {
   background-color: #000;
 }
+.dots {
+  display: flex;
+  align-items: center; /* Center vertically */
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+}
+
+.dots ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.dots li {
+  margin: 0 10px; /* Add spacing between the buttons */
+}
+
+.displayer {
+  width: 15px; /* Set the desired button width */
+  height: 15px; /* Set the desired button height */
+  background-color: #ccc; /* Set the button background color */
+  border: 1px solid #000; /* Add a border */
+  border-radius: 50%; /* Make it round */
+}
+
+.displayer[aria-label="Current"] {
+  background-color: #d0d8e0; /* Change the background color for the "Current" buttons */
+  
+  
+  color: #fff; /* Change the text color for the "Current" buttons */
+}
+
 
 nav ul{
 list-style-type: none;
@@ -22,7 +56,6 @@ font-family: Arial;
 font-size: 12.25px;
 font-style: bold;
 font-weight: 400;
-line-height: 15.4px; /* 125.714% */
 text-transform: uppercase;
 font-weight: bold;
 
@@ -111,7 +144,7 @@ flex-shrink: 0;
     justify-content: space-between;
     }
     .reklam-text {
-        
+      color: #D7E7FF;
         align-self: center;
         display: flex;
         flex-direction: column;

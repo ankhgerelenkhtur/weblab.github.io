@@ -1,0 +1,32 @@
+:root{
+    --color-white: #fff;
+    --color-gray:#504e4e;
+    --color-bright-gray: #7F7F7F;
+    --color-black: #000;
+    --color-red: #E60000;
+    --gradient: radial-gradient(80% 80% at 50% 50%, rgba(111, 32, 27, 0.938) 0%, #200909 85.94%);
+    --font-size-2: 2rem;
+    --font-size-1: 4rem;
+    --font-size-3: 1.6rem;
+    --size-none: 0px;
+    --border-size: 0.0001rem;
+    --image-size: 2rem;
+    
+
+    --color-bg : var(--color-black);
+    --color-garchig-main : var(--color-white);
+    --color-text-engiin: var(--color-white);
+    --color-border-line: var(--color-white);
+    --color-border-li:var(--color-gray);
+    --color-footer-text: var(--color-bright-gray);
+
+    --font-header: Arial, Helvetica, sans-serif;
+   --font-section-title: Arial; 
+    --font-text-engiin: Roboto, sans-serif;
+    --font-size-big: 1.2rem;
+    --font-size-movie: 2rem;
+    --font-size-small: 0.8rem;
+    --font-size-reting: 0.6rem;
+
+    --percent-hundred: 100%;
+}

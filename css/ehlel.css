@@ -1,59 +1,288 @@
+body{
+  background-color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body h2 {
+  text-align: center;
+  font-family: var(--font-section-title, Arial); 
+  font-size: var(--font-size-2, 2rem); 
+  color: var(--color-white, #fff); 
+}
+body header nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 1000px;
+  height: 54px;
+  max-width: 1728px;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 2%;
+  border-radius: 10px;
+  background: rgba(50, 50, 50, 0.21);
+  margin-left: 15%;
+  color: var(--color-white, #fff);
+  text-align: center;
+  font: 12.25px bold Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
-body {
-  & h2{
-    text-align: center;
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  body header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15px;
   }
-  & main{
-    & section{
-      & article{
-        & div{
-          & .MORE{
-          } 
-           & button{
-
-              margin-top: 125%;
-              margin-left: 80%;  
-            }
-            & .MORE{
-              margin-top: 150%;
-              margin-left: 40%;
-            }
-            }       
-        }
-      }
-    }
   
-    & .nowplaying{
-      
-     margin-left: 5%;
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+body header .navbutton button{
+  background: transparent; 
+  border: none; 
+  background-image: url('/image/right-arrow.png'); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 20px;
+  filter: invert(100%);
+}
+
+body header .navbutton .prev {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: rotate(180deg);
+}
+body header .navbutton .next {
+  position: absolute;
+  right: 2%;
+  top: 50%;
   
-      & div{
-        display: flex;
-        flex-flow: row wrap;
-        
-       & article{
+}
+body main section article a .mname {
+  text-decoration: none;
+  position: absolute;
+  bottom: 5%; 
+  left: 5%;
+}
+body main .poster1 {
+  border-radius: 20px;
+  border-bottom: 110px solid rgba(0, 0, 0, 0.80);
+  width: 350px;
+  max-width: 50%;
+  height: 300px;
+  background: url(/image/poster.jpeg) center/cover no-repeat;
+  box-shadow: 0 4px 32px 0 #F00;
+  object-fit: contain;
+  position: absolute;
+  top: 25%;
+  left: 10%;
+}
+body main .poster1 article a h2 {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  bottom: 10%; 
+  left: 5%;
+}
 
-        width: 25%;
-        margin: 2rem;
-       
-        & a{
-      
-          & img{
-            width: 100%;
-            height: 60%;
-          }
-        }
-        
-       }
-      }
-    }
-   
+body main section article .maininfo {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: var(--color-white, #fff);
+}
 
-      
-      
+body main section article img {
+  filter: invert(100%);
+  position: absolute;
+  bottom: 5%; 
+}
+
+body main section article .maininfo .time {
+  position: absolute;
+  bottom: 0%; 
+  left: 10%;
+}
+
+body main section article .maininfo .genre {
+  position: absolute;
+  bottom: -5%; 
+  left: 10%;
+  text-transform: capitalize;
+}
+
+
+
+body main section article button {
+  margin-top: 125%;
+  margin-left: 80%;
+}
+
+body main section article .more {
+  position: absolute;
+  bottom: -12%;
+  left: 70%;
+  color: white;
+  font-family: 'Roboto Flex';
+  text-decoration: none;
+}
+
+body main section article .secondary {
+  position: absolute;
+  bottom: -25%;
+  left: -10%;
+}
+
+body .nowplaying {
+  padding-top: 2%;
+  background: radial-gradient(80% 80% at 50% 50%, rgba(111, 32, 27, 0.938) 0%, #200909 85.94%);
+  color: var(--color-white, #fff); 
+}
+body .nowplaying div{
+  margin-left: 5%;
+}
+
+body .nowplaying div {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body .nowplaying article {
+  width: 25%;
+  margin: 2rem;
+}
+
+body .nowplaying article a {
+  text-decoration: none;
+  color: black;
+}
+
+body .nowplaying article a img {
+  width: 100%;
+  height: 60%;
+  object-fit: fill;
+}
+
+body .nowplaying article a h3{
+  color: var(--color-white, #fff);
+}
+
+body .comingsoon {
+  background-color: rgb(37, 37, 37);
+  padding-top: 10%;
+}
+body .comingsoon article  {
+  width: 32%; 
+  display: flex;
+  flex-flow: row wrap;
+}
+body .comingsoon article a img {
+  width: 250px; 
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body .reklam1 .right div a img{
+  width: 120px;
+  height: 100px;
+  margin-top: 0%;
+
+}
+body .reklam1 .right div{
+ margin-right: 10%;
+  margin-left: 10%;
+}
+body .reklam1{
+  background-color: black;
+  display: flex;
+  color: var(--color-white, #fff);
   
+}
+body .reklam1 p {
+  color: var(--color-gray);
+  font-size: 5%;
+}
+body .reklam1 h4,p {
+  margin-left: 10%;
+ 
+}
+body .reklam1 .left a img {
+  width: 15%;
+  height: 10%;
+  margin-left: 40%;
+  font-family: var(--font-text-engiin);
+  
+}
+body .reklam1 .left{
+  margin-top: 5%;
+}
+body .reklam1 .right {
+  display: flex;
+  justify-content: space-between;
+}
 
-  background-color: white;
+
+body .reklam1, .reklam2{
+  background: linear-gradient(to bottom right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top right / 50% 50% no-repeat;
+  border-top: 1px solid #0038FF;
+border-bottom: 1px solid #0038FF;
+background-color: #000;
+
+}
+body .reklam2 .right2 div a img{
+  width: 120px;
+  height: 100px;
+  margin-top: 0%;
+
+}
+body .reklam2 .right2 div{
+ margin-right: 10%;
+  margin-left: 10%;
+}
+body .reklam2{
+  background-color: black;
+  display: flex;
+  color: var(--color-white, #fff);
+  
+}
+body .reklam2 p {
+  color: var(--color-gray);
+  font-size: 5%;
+}
+body .reklam2 h4,p {
+  margin-left: 10%;
+ 
+}
+body .reklam2 .left2 a img {
+  width: 15%;
+  height: 10%;
+  margin-left: 40%;
+  font-family: var(--font-text-engiin);
+  
+}
+body .reklam2 .left2{
+  margin-top: 5%;
+}
+body .reklam2 .right2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.more{
+  text-decoration: none;
+  color: black;
 }
 
 .dots, .dots ul {
@@ -84,34 +313,10 @@ body {
 }
 
 .displayer[aria-label="Current"] {
-  background-color: #d0d8e0;
-  color: #fff;
+  background-color: #ffffff;
+  color: var(--color-white);
 }
 
-nav ul {
-  display: flex;
-  list-style-type: none;
-  width: 1000px;
-  height: 54px;
-  max-width: 1728px;
-  padding: 0 15px;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 2%;
-  border-radius: 10px;
-  background: rgba(50, 50, 50, 0.21);
-  margin-left: 15%;
-  color: #D7E7FF;
-  text-align: center;
-  font: 12.25px bold Arial, sans-serif;
-  text-transform: uppercase;
-}
-
-nav a {
-  text-decoration: none;
-  color: inherit;
-}
 
 
 .backgroundimg {
@@ -119,12 +324,9 @@ nav a {
   height: 100%;
 }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-}
 
-.register {
+
+.secondary {
   display: flex;
   width: 88px;
   height: 30px;
@@ -145,28 +347,8 @@ nav a {
   position: absolute;
 }
 
-.poster1 {
-  border-radius: 20px;
-  border-bottom: 110px solid rgba(0, 0, 0, 0.80);
-  width: 350px;
-  max-width: 50%;
-  height: 300px;
-  background: url(/image/poster.jpeg) center/cover no-repeat;
-  box-shadow: 0 4px 32px 0 #F00;
-  object-fit: contain;
-  position: absolute;
-  top: 25%;
-  left: 10%;
-}
 
-@media (max-width: 200px) {
-  .poster1 {
 
-    width: 1%;
-    top: 1%;
-    left: 5%;
-  }
-}
 
 .buttons {
   display: flex;

@@ -6,10 +6,12 @@
 body{
     color: white;
     background-color:  #030c23;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 footer a  button {
     position: absolute;
+    z-index: 1;
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 2px;
@@ -22,14 +24,17 @@ footer a  button {
     height: 20px;
     width: 48px;
 }
- .backgroundimg{
+ 
+.backgroundimg{
     filter: brightness(75%);
  }
+ 
 .actor{
     position: absolute;
     left: 10%;
-    bottom: 25%;
+    bottom: 18%;
 }
+
 
 
 .award{

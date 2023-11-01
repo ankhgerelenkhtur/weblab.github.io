@@ -1,214 +1,88 @@
-.header_buttons {
-    display: flex;
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.header_buttons div {
-    display: inline-block;
-    font-size: 20px;
-    padding: 20px;
-}
-
-.button {
-    display: inline-block;
-}
-
-.start_button {
-    margin-right: 300px;
-}
-
-.coming {
-    display: flex;
-    opacity: 0.5;
-}
-
-
-.return_button {
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.start_button {
-    display: inline-block;
-    font-size: 20px;
-    padding: 20px;
-}
-
-
-.background_image_1 {
-    margin-top: -100px;
-    background-size: cover;
-    opacity: 1;
-}
-
-.image1 {
-    max-height: 800px;
-    width: 100%;
-    background-size: cover;
-}
-.button_order_div{
-    margin-top: -90px;
-}
-
-.button_order {
-    background-color: #212121;
-    max-width: 300px;
-    width: 236px;
-    height: 100px;
-    margin-left: 5%;
-    color: white;
-    border-radius: 30px;
-    box-shadow: 0 8px #0B4FFE;
-    font-size: 28px;
-    font-family: ' Bold';
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
 }
 
 body{
-    height: 100vh;
-    background-color: #030246;
-}
-
-.button_order :hover{
-    border: none;
-}
-.button_order :active{
-    border:0px ;
-}
-.section{
-    display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.sub_section{
-    width: 50%;
-   align-content: center;
-   align-self: center;
-}
-
-.sub_section h1{
-    font-size: 80px;
-    font-family: "Bold";
     color: white;
+    background-color:  #030c23;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.sub_section h4{
-    text-align: end;
-    font-size: 50px;
+
+
+footer a  button {
+    position: absolute;
+    z-index: 1;
+    border-radius: 2px;
+    border: 1px rgba(0, 56, 255, 0.17);
+    background: #4e535a;
+    box-shadow: 0px 0px 0px 1px blue inset;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-top:  20px;
+    margin-left: 20px;
+    height: 20px;
+    width: 48px;
+}
+
+.coming{
+    position: absolute;
+    left: 44%;
+    bottom: 90%;
+}
+
+.director{
     align-items: center;
-    color: white;
-}
-
-.main_text{
-    color: white;
-    margin-left: 5%;
-    margin-right: 30%;
-    font-size: 20px;
-    text-align: justify;
-}
-
-.comingsooncast h4{
-    color: white;
-    text-align: center;
-    font-size: 40px;
-}
-.actors{
-    width: 100%;
+    margin-bottom: 80px;
+    margin-top: 40px;
     display: flex;
-    align-items: center;
-    align-content: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 60px;
-}
-.actor{
-    margin-left: 5%;
-    margin-right: 10%; 
-}
-.actor1{
-    margin-left: 15%;
-    margin-right: 10%; 
+    flex-direction: column;
 }
 
-.actor_image{
-    border-radius: 175px;
-}
-.actor h4{
-    text-align:  center;
-    color: white;
-    font-family: "BOLD";
-}
-.actor1  h4{
-    text-align:  center;
-    color: white;
-    font-family: "BOLD";
-}
-.actor h3{
-    text-align:  center;
-    color: white;
-    font-size: 45px;
-    font-family: "BOLD";
+.director img{
+    border: 1px;
+    border-radius: 100%;
 }
 
-.actor1 h3{
-    text-align:  center;
-    color: white;
-    font-size: 45px;
-    font-family: "BOLD";
-}
-.acts_1{
+ 
+
+
+
+
+
+
+
+
+
+
+
+.reklam3 {
+    background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0.00) 100%),
+                        linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0.00) 104.97%);
     display: flex;
-    margin-left: 42%;
-}
-.act1{
-    color: white;
-     margin-left: 10%;
-}
-.act4{
-     color: white;
-     
-}
-
-.act2{
-    background-color:#0038FF;
-    height: 86px;
-    width: 571px;
-    color: white;
-    border-radius: 45px;
-    margin-left: 10%;
-    text-align: center;
-    align-self: center;
-    align-content: center;
-}
-.act3{
-    border-radius: 45px;
-    border: 1px solid #0038FF;
-    height: 86px;
-    width: 571px;
-    color: white;
-    margin-left: 15%;
-    text-align: center;
-    align-self: center;
-    align-content: center;
-}
-.acts_2{
-    display: flex;
-
-}
-.other{
-    background-color: aqua;
-    height: 60px;
-    align-items: center;
-    align-self: center;
-    align-content: center;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-   
+    background-color: #000;
+    justify-content: space-between;
     }
-.other div{
-    margin-left: 45%;
-}
+    
+    .reklam-text {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .click-text {
+        display: flex;
+        align-items: center
+    }
+    
+    .shining-border {
+        position: relative;
+        border-top: 3px solid transparent;
+        border-image: linear-gradient(90deg, transparent, #00f, transparent);
+        border-image-slice: 1;
+        font-size: 24px;
+    }

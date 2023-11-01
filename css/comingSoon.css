@@ -1,0 +1,88 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    background-color:  #030c23;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+footer a  button {
+    position: absolute;
+    z-index: 1;
+    border-radius: 2px;
+    border: 1px rgba(0, 56, 255, 0.17);
+    background: #4e535a;
+    box-shadow: 0px 0px 0px 1px blue inset;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-top:  20px;
+    margin-left: 20px;
+    height: 20px;
+    width: 48px;
+}
+
+.coming{
+    position: absolute;
+    left: 44%;
+    bottom: 90%;
+}
+
+.director{
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.director img{
+    border: 1px;
+    border-radius: 100%;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+.reklam3 {
+    background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0.00) 100%),
+                        linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0.00) 104.97%);
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    }
+    
+    .reklam-text {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .click-text {
+        display: flex;
+        align-items: center
+    }
+    
+    .shining-border {
+        position: relative;
+        border-top: 3px solid transparent;
+        border-image: linear-gradient(90deg, transparent, #00f, transparent);
+        border-image-slice: 1;
+        font-size: 24px;
+    }

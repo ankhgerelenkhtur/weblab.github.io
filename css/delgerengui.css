@@ -58,9 +58,21 @@ footer a  button {
 .logo h1 {
     font-size: 80px;
 }
+.trailer1{
+    position: absolute;
+    left: 65%;
+    bottom: -10%;
+}
 
 
 
+
+
+.movie-features{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 
 

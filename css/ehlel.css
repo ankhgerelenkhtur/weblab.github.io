@@ -298,6 +298,11 @@ aside article .reklam-text .click-text h2{
   margin-top: -15%;
   margin-left: 100%;
  }
+ footer{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+ }
 footer section h4{
  color: var(--color-white);
 }

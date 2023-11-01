@@ -1,166 +1,145 @@
 body {
   background-color: #000;
 }
-.dots {
-  display: flex;
-  align-items: center; /* Center vertically */
-  position: absolute;
-  bottom: 5%;
-  left: 45%;
-}
 
-.dots ul {
+.dots, .dots ul {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
 }
+.dots {
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+  background: transparent;
+  padding: 10px;
 
+}
 .dots li {
-  margin: 0 10px; /* Add spacing between the buttons */
+  margin: 0 10px;
 }
 
 .displayer {
-  width: 15px; /* Set the desired button width */
-  height: 15px; /* Set the desired button height */
-  background-color: #ccc; /* Set the button background color */
-  border: 1px solid #000; /* Add a border */
-  border-radius: 50%; /* Make it round */
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
 }
 
 .displayer[aria-label="Current"] {
-  background-color: #d0d8e0; /* Change the background color for the "Current" buttons */
-  
-  
-  color: #fff; /* Change the text color for the "Current" buttons */
+  background-color: #d0d8e0;
+  color: #fff;
 }
 
+nav ul {
+  display: flex;
+  list-style-type: none;
+  width: 1000px;
+  height: 54px;
+  max-width: 1728px;
+  padding: 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 2%;
+  border-radius: 10px;
+  background: rgba(50, 50, 50, 0.21);
+  margin-left: 15%;
+  color: #D7E7FF;
+  text-align: center;
+  font: 12.25px bold Arial, sans-serif;
+  text-transform: uppercase;
+}
 
-nav ul{
-list-style-type: none;
-display: flex;
-width: 1000px;
-height: 54px;
-max-width: 1728px;
-padding: 0px 15px;
-justify-content: space-between;
-align-items: center;
-position: absolute;
-top: 2%;
-border-radius: 10px;
-background: rgba(50, 50, 50, 0.21);
-margin-left: 15%;
-color: #D7E7FF;
-text-align: center;
-font-family: Arial;
-font-size: 12.25px;
-font-style: bold;
-font-weight: 400;
-text-transform: uppercase;
-font-weight: bold;
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
 
+.backgroundimg {
+  width: 100%;
+  height: 100%;
 }
-nav a{
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the color from the parent element */
-  
-}
-.dots{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.backgroundimg{
-   width: 100%;
-   height: 100%;
-}
-.prev{
-    position: absolute;
-    left: 1%;
-    top: 50%;
-}
-.next{
-    position: absolute;
-   right: 1%;
-    top: 50%;
-}
-.register{
-display: flex;
-width: 88px;
-height: 30px;
-padding: 8px 16px;
-flex-direction: column;
-align-items: center;
-border-radius: 24px;
-border: 0.5px solid #0B4FFE;
-background: rgba(0, 0, 0, 0.00);
-box-shadow: 0px 0px 0px 1px #0768AF inset;
-color: #D7E7FF;
-text-align: center;
-font-family: Arial;
-font-size: 12.25px;
-text-transform: uppercase;
-}
-.mname a{
-position: absolute;
 
+.prev, .next {
+  position: absolute;
+  top: 50%;
 }
+
+.register {
+  display: flex;
+  width: 88px;
+  height: 30px;
+  padding: 8px 16px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  border: 0.5px solid #0B4FFE;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 1px #0768AF inset;
+  color: #D7E7FF;
+  text-align: center;
+  font: 12.25px Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.mname a {
+  position: absolute;
+}
+
 .poster1 {
-    border-radius: 20px;
-    border-bottom: 110px solid rgba(0, 0, 0, 0.80);
-    width: 350px;
-    max-width: 50%; /* Adjust the max-width to your preference */
-    height: 300px; /* Allow the height to adjust proportionally */
-    background: url(/image/poster.jpeg) center/cover no-repeat; /* Simplify the background property */
-    box-shadow: 0px 4px 32px 0px #F00;
-    object-fit: contain;
-    position: absolute;
-    top: 25%;
-    left: 10%;
-  }
-  
-  @media (max-width: 200px) {
-    /* Add specific styles for smaller screens (adjust the breakpoint as needed) */
-    .poster1 {
-      width: 1%; /* Adjust the width to your preference */
-      top: 1%; /* Adjust the top position for smaller screens */
-      left: 5%; /* Adjust the left position for smaller screens */
-    }
-  }
-  
-.buttons{
-display: flex;
-width: 140px;
-height: 50px;
-padding: 15px 16.81px 15px 16.8px;
-justify-content: space-between;
-align-items: flex-start;
-flex-shrink: 0;
+  border-radius: 20px;
+  border-bottom: 110px solid rgba(0, 0, 0, 0.80);
+  width: 350px;
+  max-width: 50%;
+  height: 300px;
+  background: url(/image/poster.jpeg) center/cover no-repeat;
+  box-shadow: 0 4px 32px 0 #F00;
+  object-fit: contain;
+  position: absolute;
+  top: 25%;
+  left: 10%;
 }
+
+@media (max-width: 200px) {
+  .poster1 {
+    width: 1%;
+    top: 1%;
+    left: 5%;
+  }
+}
+
+.buttons {
+  display: flex;
+  width: 140px;
+  height: 50px;
+  padding: 15px 16.81px 15px 16.8px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
 .reklam3 {
-    background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0.00) 100%),
-                        linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0.00) 104.97%);
-    display: flex;
-    justify-content: space-between;
-    }
-    .reklam-text {
-      color: #D7E7FF;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex: 1;
+  background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0) 100%),
+                  linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0));
 }
-    
-    .click-text {
-        display: flex;
-        align-items: center
+
+.reklam-text, .click-text {
+  color: #D7E7FF;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
-    
-    .shining-border {
-        position: relative;
-        border-top: 3px solid transparent;
-        border-image: linear-gradient(90deg, transparent, #00f, transparent);
-        border-image-slice: 1;
-        font-size: 24px;
-    }
+
+.shining-border {
+  position: relative;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, transparent, #00f, transparent);
+  border-image-slice: 1;
+  font-size: 24px;
+}

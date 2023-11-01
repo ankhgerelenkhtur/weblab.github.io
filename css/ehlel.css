@@ -87,6 +87,7 @@ body main .poster1 {
   position: absolute;
   top: 25%;
   left: 10%;
+  
 }
 body main .poster1 article a h2 {
   text-decoration: none;
@@ -172,6 +173,7 @@ body .nowplaying article a img {
   width: 100%;
   height: 60%;
   object-fit: fill;
+  border-radius: 20px;
 }
 
 body .nowplaying article a h3{
@@ -205,10 +207,9 @@ body .reklam1 .right div{
   margin-left: 10%;
 }
 body .reklam1{
-  background-color: black;
+  background-color: var(--color-bg);
   display: flex;
   color: var(--color-white, #fff);
-  
 }
 body .reklam1 p {
   color: var(--color-gray);
@@ -234,55 +235,29 @@ body .reklam1 .right {
 }
 
 
-body .reklam1, .reklam2{
+body .reklam1{
   background: linear-gradient(to bottom right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top right / 50% 50% no-repeat;
-  border-top: 1px solid #0038FF;
-border-bottom: 1px solid #0038FF;
-background-color: #000;
+  border-top: 1px dotted #0038FF;
+  border-bottom: 1px dotted #0038FF;
+  background-color: var(--color-bg);
+}
 
+@keyframes gifAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-body .reklam2 .right2 div a img{
-  width: 120px;
-  height: 100px;
-  margin-top: 0%;
 
-}
-body .reklam2 .right2 div{
- margin-right: 10%;
-  margin-left: 10%;
-}
-body .reklam2{
-  background-color: black;
-  display: flex;
-  color: var(--color-white, #fff);
-  
-}
-body .reklam2 p {
-  color: var(--color-gray);
-  font-size: 5%;
-}
-body .reklam2 h4,p {
-  margin-left: 10%;
- 
-}
-body .reklam2 .left2 a img {
-  width: 15%;
-  height: 10%;
-  margin-left: 40%;
-  font-family: var(--font-text-engiin);
-  
-}
-body .reklam2 .left2{
-  margin-top: 5%;
-}
-body .reklam2 .right2 {
-  display: flex;
-  justify-content: space-between;
+.gif-animation {
+  animation: gifAnimation 1s infinite; 
 }
 
 .more{
   text-decoration: none;
-  color: black;
+  color: var(--color-white);
 }
 
 .dots, .dots ul {

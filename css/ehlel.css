@@ -77,7 +77,7 @@ body main section article a .mname {
 }
 body main .poster1 {
   border-radius: 20px;
-  border-bottom: 110px solid rgba(0, 0, 0, 0.80);
+  border-bottom: 110px solid rgba(0, 0, 0, 1);
   width: 350px;
   max-width: 50%;
   height: 300px;
@@ -91,40 +91,38 @@ body main .poster1 {
 }
 body main .poster1 article a h2 {
   text-decoration: none;
-  color: white;
+  color: var(--color-white);
   position: absolute;
-  bottom: 10%; 
-  left: 5%;
+  font-size: 28px;
+  bottom: -32%; 
+  left: 6%;
 }
 
 body main section article .maininfo {
-  position: absolute;
-  bottom: 5%;
-  left: 5%;
   color: var(--color-white, #fff);
 }
 
 body main section article img {
   filter: invert(100%);
   position: absolute;
-  bottom: 5%; 
+  bottom: -9%; 
+  left: 8%;
 }
 
-body main section article .maininfo .time {
+body main section article .maininfo .time, .genre{
   position: absolute;
-  bottom: 0%; 
-  left: 10%;
+  bottom: -14%; 
+  left: 20%;
+  color: var(--color-gray);
+  font-size: 13px;
 }
 
 body main section article .maininfo .genre {
   position: absolute;
-  bottom: -5%; 
-  left: 10%;
+  bottom: -38%; 
+  left: 13%;
   text-transform: capitalize;
 }
-
-
-
 body main section article button {
   margin-top: 125%;
   margin-left: 80%;
@@ -132,16 +130,16 @@ body main section article button {
 
 body main section article .more {
   position: absolute;
-  bottom: -12%;
-  left: 70%;
+  bottom: -15%;
+  left: 72%;
   color: white;
-  font-family: 'Roboto Flex';
+  font-size: 13px;
   text-decoration: none;
 }
 
 body main section article .secondary {
   position: absolute;
-  bottom: -25%;
+  bottom: -30%;
   left: -10%;
 }
 
@@ -149,19 +147,36 @@ body .nowplaying {
   padding-top: 2%;
   background: radial-gradient(80% 80% at 50% 50%, rgba(111, 32, 27, 0.938) 0%, #200909 85.94%);
   color: var(--color-white, #fff); 
+  background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(255, 15, 0, 0.29) 0%, #000 85.94%);
 }
+img.cal {
+  filter: invert(100%);
+}
+
+body .nowplaying h2 {
+  border-bottom: 2px solid var(--color-bright-gray); 
+  display: inline-block;
+  margin-left: 38%;
+  padding-bottom: 5px;
+  margin-bottom: 10px; 
+  
+}
+
+
 body .nowplaying div{
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 body .nowplaying div {
   display: flex;
   flex-flow: row wrap;
+  
 }
 
 body .nowplaying article {
   width: 25%;
   margin: 2rem;
+
 }
 
 body .nowplaying article a {
@@ -171,9 +186,12 @@ body .nowplaying article a {
 
 body .nowplaying article a img {
   width: 100%;
-  height: 60%;
+  height: 40%;
   object-fit: fill;
   border-radius: 20px;
+  border-radius: 5px;
+border-bottom: 110px solid rgba(0, 0, 0, 0.80);
+  
 }
 
 body .nowplaying article a h3{
@@ -182,7 +200,7 @@ body .nowplaying article a h3{
 
 body .comingsoon {
   background-color: rgb(37, 37, 37);
-  padding-top: 10%;
+  padding-top: 2%;
 }
 body .comingsoon article  {
   width: 32%; 
@@ -197,14 +215,16 @@ body .comingsoon article a img {
 }
 
 body .reklam1 .right div a img{
-  width: 120px;
+  width: 100px;
   height: 100px;
-  margin-top: 0%;
-
+ 
+  margin-top: 5%;
 }
 body .reklam1 .right div{
- margin-right: 10%;
-  margin-left: 10%;
+margin-right: 2%;
+margin-bottom: 2%;
+margin-left: 3%;
+padding: 2%;
 }
 body .reklam1{
   background-color: var(--color-bg);
@@ -216,48 +236,70 @@ body .reklam1 p {
   font-size: 5%;
 }
 body .reklam1 h4,p {
-  margin-left: 10%;
- 
+
+  margin-left: -5%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body .reklam1 .left a img {
   width: 15%;
-  height: 10%;
-  margin-left: 40%;
-  font-family: var(--font-text-engiin);
-  
+  height: 15%; 
+  margin-top: 14%;
+  margin-left: 30%;
 }
-body .reklam1 .left{
-  margin-top: 5%;
+body .reklam1 .left h3{
+  margin-top: 4%;
+  font-size: 15px;
+  font-family: var(--font-text-engiin);
 }
 body .reklam1 .right {
   display: flex;
   justify-content: space-between;
 }
-
-
+body .reklam1 .left{
+  width: 30%;
+  height: 30%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
 body .reklam1{
   background: linear-gradient(to bottom right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top right / 50% 50% no-repeat;
   border-top: 1px dotted #0038FF;
   border-bottom: 1px dotted #0038FF;
   background-color: var(--color-bg);
 }
-
-@keyframes gifAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
+aside{
+  background: linear-gradient(to bottom right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top right / 50% 50% no-repeat;
+  border-top: 1px dotted #0038FF;
+  border-bottom: 1px dotted #0038FF;
+  background-color: var(--color-bg);
 }
-
-.gif-animation {
-  animation: gifAnimation 1s infinite; 
-}
-
-.more{
-  text-decoration: none;
+aside article{
   color: var(--color-white);
+  display: flex;
+  border: #0038FF;
+}
+aside article img{
+  width: 50%;
+  height: 5%;
+  margin-left: 30%;
+}
+aside article .reklam-text h3{
+ margin-top: 40%; 
+ margin-left: 50%;
+ white-space: nowrap;
+font-size: 25px;
+}
+aside article .reklam-text a img{
+  
+  margin-top: -8%; 
+ margin-left: 50%;
+}
+aside article .reklam-text .click-text h2{
+  margin-top: -15%;
+  margin-left: 100%;
+ }
+footer section h4{
+ color: var(--color-white);
 }
 
 .dots, .dots ul {
@@ -278,7 +320,6 @@ body .reklam1{
 .dots li {
   margin: 0 10px;
 }
-
 .displayer {
   width: 15px;
   height: 15px;
@@ -286,7 +327,6 @@ body .reklam1{
   border: 1px solid #000;
   border-radius: 50%;
 }
-
 .displayer[aria-label="Current"] {
   background-color: #ffffff;
   color: var(--color-white);
@@ -298,9 +338,6 @@ body .reklam1{
   width: 100%;
   height: 100%;
 }
-
-
-
 .secondary {
   display: flex;
   width: 88px;
@@ -317,14 +354,6 @@ body .reklam1{
   font: 12.25px Arial, sans-serif;
   text-transform: uppercase;
 }
-
-.mname a {
-  position: absolute;
-}
-
-
-
-
 .buttons {
   display: flex;
   width: 140px;
@@ -335,24 +364,3 @@ body .reklam1{
   flex-shrink: 0;
 }
 
-.reklam3 {
-  background-image: linear-gradient(180deg, rgba(0, 56, 255, 0.17) 0%, rgba(0, 0, 0, 0) 100%),
-                  linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.98) 0.01%, rgba(0, 0, 0, 0.84) 78.18%, rgba(0, 0, 0, 0));
-}
-
-.reklam-text, .click-text {
-  color: #D7E7FF;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
-.shining-border {
-  position: relative;
-  border-top: 3px solid transparent;
-  border-image: linear-gradient(90deg, transparent, #00f, transparent);
-  border-image-slice: 1;
-  font-size: 24px;
-}

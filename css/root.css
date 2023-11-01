@@ -8,11 +8,13 @@
     --font-size-2: 2rem;
     --font-size-1: 4rem;
     --font-size-3: 1.6rem;
+    --font-size-text: 0.2rem
     --size-none: 0px;
     --border-size: 0.0001rem;
     --image-size: 2rem;
+  
     
-
+    --color-line : var(--color-line);
     --color-bg : var(--color-black);
     --color-garchig-main : var(--color-white);
     --color-text-engiin: var(--color-white);

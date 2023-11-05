@@ -17,7 +17,7 @@ body header nav ul {
   padding: 0 15px;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 2%;
   border-radius: 10px;
   background: rgba(50, 50, 50, 0.21);
@@ -28,7 +28,10 @@ body header nav ul {
   text-transform: uppercase;
   font-weight: bold;
 }
-
+.backgroundimg {
+  width: 100%;
+  height: 100%;
+}
 nav a {
   text-decoration: none;
   color: inherit;
@@ -142,7 +145,6 @@ body main section article .secondary {
   bottom: -30%;
   left: -10%;
 }
-
 body .nowplaying {
   padding-top: 2%;
   background: radial-gradient(80% 80% at 50% 50%, rgba(111, 32, 27, 0.938) 0%, #200909 85.94%);
@@ -161,63 +163,108 @@ body .nowplaying h2 {
   margin-bottom: 10px; 
   
 }
-
-
 body .nowplaying div{
   margin-left: 10%;
 }
-
 body .nowplaying div {
   display: flex;
-  flex-flow: row wrap;
-  
+  flex-flow: row wrap; 
 }
-
 body .nowplaying article {
   width: 25%;
-  margin: 2rem;
-
+  margin-left: 2rem;
+  margin-right: 2rem;
+  object-fit: contain;
 }
-
 body .nowplaying article a {
   text-decoration: none;
-  color: black;
+  color: var(--color-white);
 }
-
 body .nowplaying article a img {
   width: 100%;
-  height: 40%;
-  object-fit: fill;
+  height: 55%;
+  object-fit: cover;
   border-radius: 20px;
   border-radius: 5px;
 border-bottom: 110px solid rgba(0, 0, 0, 0.80);
   
 }
-
+body .nowplaying h2{
+  margin-bottom: 5%;
+}
 body .nowplaying article a h3{
   color: var(--color-white, #fff);
+} 
+body .nowplaying div article .group{
+position: relative;
+top: -26%;
+color: var(--color-gray);
+}
+body .nowplaying div article .group h4{
+  position: relative;
+  left: -105px;
+  top: 13px;
+  color: var(--color-white);
+
+}
+body .nowplaying div article .group img{
+  position: relative;
+  left: -16px;
+  bottom: -35px;
+}
+body .nowplaying div article .group a{
+  position: relative;
+  left: 150px;
+  bottom: -35px;
+  color: var(--color-lightblue);
+ 
+  
+}
+body .nowplaying div article h3{
+  position: relative;
+  left: 0px;
+  bottom: 550px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  font-size: 25px;
+  text-align: center;
+}
+.comingsoon {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+  margin: 0;
+  margin-left: 3%;
+  
+}
+.comingsoon article {
+  margin-bottom: 5%;
+  object-fit: contain;
+
+}
+.comingsoon article div{
+  color: var(--color-gray);
+  margin-left: 10%;
+}
+.comingsoon article a img {
+  box-shadow: 0px 8px 32px -5px #0038FF;
+  width: 200px;
+  height: 300px;
+  border-radius: 5%;
 }
 
-body .comingsoon {
-  background-color: rgb(37, 37, 37);
-  padding-top: 2%;
+.comingsoon article div img{
+  width: 5%;
+  filter: invert(100%);
 }
-body .comingsoon article  {
-  width: 32%; 
-  display: flex;
-  flex-flow: row wrap;
+.comingsoon article div p{
+  position: relative;
+  left: 18%;
+  bottom: 35px;
 }
-body .comingsoon article a img {
-  width: 250px; 
-  height: 200px;
-  display: flex;
-  flex-flow: row wrap;
-}
-
 body .reklam1 .right div a img{
   width: 100px;
   height: 100px;
- 
   margin-top: 5%;
 }
 body .reklam1 .right div{
@@ -281,10 +328,10 @@ aside article{
 aside article img{
   width: 50%;
   height: 5%;
-  margin-left: 30%;
+  margin-left: 25%;
 }
 aside article .reklam-text h3{
- margin-top: 40%; 
+ margin-top: 38%; 
  margin-left: 50%;
  white-space: nowrap;
 font-size: 25px;
@@ -336,13 +383,6 @@ footer section h4{
   background-color: #ffffff;
   color: var(--color-white);
 }
-
-
-
-.backgroundimg {
-  width: 100%;
-  height: 100%;
-}
 .secondary {
   display: flex;
   width: 88px;
@@ -359,13 +399,42 @@ footer section h4{
   font: 12.25px Arial, sans-serif;
   text-transform: uppercase;
 }
-.buttons {
-  display: flex;
-  width: 140px;
-  height: 50px;
-  padding: 15px 16.81px 15px 16.8px;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-shrink: 0;
+.secondary:hover {
+  background-color: var(--color-lightblue); 
+  color: #ffffff;
+}
+.more {
+  text-decoration: none;
+  color: inherit;
 }
 
+.more:hover {
+  color: var(--color-lightblue);
+}
+.comingsoon article img {
+  transition: transform 0.3s;
+ 
+}
+.comingsoon article img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 4px 32px 0 #861212;
+}
+.gif-animation {
+  transition: transform 0.3s; 
+}
+.gif-animation:hover {
+  transform: scale(1.5); 
+}
+@keyframes bounce {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2); 
+}}
+
+@media (max-width: 768px) {
+  body .nowplaying div article {
+    width: 100%;
+  }
+}

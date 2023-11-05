@@ -1,4 +1,5 @@
 :root{
+    --color-lightblue: #0768AF;
     --color-white: #fff;
     --color-gray:#504e4e;
     --color-bright-gray: #7F7F7F;
@@ -13,7 +14,7 @@
     --border-size: 0.0001rem;
     --image-size: 2rem;
   
-    
+   
     --color-line : var(--color-line);
     --color-bg : var(--color-black);
     --color-garchig-main : var(--color-white);

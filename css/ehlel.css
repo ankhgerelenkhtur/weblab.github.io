@@ -249,8 +249,9 @@ body .nowplaying div article h3{
 .comingsoon article a img {
   box-shadow: 0px 8px 32px -5px #0038FF;
   width: 200px;
-  height: 300px;
+  height: 250px;
   border-radius: 5%;
+  margin-left: 5%;
 }
 
 .comingsoon article div img{

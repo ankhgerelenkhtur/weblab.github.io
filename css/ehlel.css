@@ -28,6 +28,10 @@ body header nav ul {
   text-transform: uppercase;
   font-weight: bold;
 }
+body header nav ul li:hover{
+  font-size: 17px;
+  border-bottom: #F00;
+}
 .backgroundimg {
   width: 100%;
   height: 100%;
@@ -308,6 +312,9 @@ body .reklam1 .left{
   height: 30%;
   margin-top: 2%;
   margin-left: 5%;
+}
+body .reklam1 .right p:hover{
+  color: white;
 }
 body .reklam1{
   background: linear-gradient(to bottom right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, rgba(0, 56, 255, 0.43) 0%, rgba(0, 0, 0, 0.00) 50%) top right / 50% 50% no-repeat;

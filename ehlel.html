@@ -2,7 +2,7 @@
 <html lang="mn">
     <head>
         <meta charset="UTF-8">
-    
+        <script src="js/change.js"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="URGUU, IMAX, Кино, театр">
@@ -28,55 +28,31 @@
          
             </ul>
         </nav>
-        <img class="backgroundimg" src="image/background1.jpg" alt="background wallpaper" width="1920" height="1080">
+        <img id="backgroundImage" class="backgroundimg" src="image/background1.jpg" alt="background wallpaper" width="1920" height="1080">
+
         <div class="navbutton">
-            <button class="prev" aria-label="Previous"></button>
-            <button class="next" aria-label="Next"></button>
+            <button id="prevButton" class="prev" aria-label="Previous" onclick="changeBackground('prev')"></button>
+            <button id="nextButton" class="next" aria-label="Next" onclick="changeBackground('next')"></button>
         </div>
-        <div class="dots">
-            <ul>
-                <li>
-                    <button class="displayer" aria-label="Current"></button>
-                </li>
-                <li>
-                    <button class="displayer" aria-label="Current"></button>
-                </li>
-                <li>
-                    <button class="displayer" aria-label="Current"></button>
-                </li>
-                <li>
-                    <button class="displayer" aria-label="Current"></button>
-                </li>
-            </ul>
         </div>
-        
+       
     </header>
     <main>
-        <section class="poster1">
-            <article >
-                <a href="delgerengui.html">
-                    <h2 class="mname">OPPENHEIMER</h2>
-                </a>
-                <div class="maininfo">
-                    <img
-                        src="/image/calendar.png"
-                        alt="Calendar icon"
-                        width="15"
-                        height="15"
-                    />
-                    <p class="time">2023.09.23</p>
-                  
-                    <p class="genre"> ТӨРӨЛ: DRAMA/HISTORY </p>
-                </div>
-               
-                    <button class="secondary" aria-label="Book now">Захиалах</button>
-                    <a class="more" href="delgerengui.html"> Дэлгэрэнгүй
-                    </a>
-              
-                
-            </article>
-            
-        </section>
+       
+    <section class="poster1" onmouseover="stopAutoChange()" onmouseout="startAutoChange()">
+        <article>
+            <a href="delgerengui.html">
+                <h2 class="mname">OPPENHEIMER</h2>
+            </a>
+            <div class="maininfo">
+                <img src="/image/calendar.png" alt="Calendar icon" width="15" height="15" />
+                <p class="time">2023.09.23</p>
+                <p class="genre"> ТӨРӨЛ: DRAMA/HISTORY </p>
+            </div>
+            <button class="secondary" aria-label="Book now">Захиалах</button>
+            <a class="more" href="delgerengui.html"> Дэлгэрэнгүй</a>
+        </article>
+    </section>
     </main>
 
  
@@ -290,19 +266,19 @@
             </article>
         </section>
 
-     <aside> 
-        <article >
-           
-            <div class="reklam-text"> 
-                <h3> ГАЙХАМШИГИЙН ЗӨВХӨН </h3>
-                <div class="click-text">
-                    <a href="image/imaxblue.png"> <img src="image/imaxblue.png"></a> 
-                    <h2 >Мэдрүүлнэ</h2> 
-                </div>
+    </section>
+    <article class="reklam3 shining-border">
+        <div class="reklam-text"> 
+            <h3> ГАЙХАМШИГИЙН ЗӨВХӨН </h3>
+            <div class="click-text">
+                <a href="image/imaxblue.png"> <img src="image/imaxblue.png"></a> 
+                <h3>Мэдрүүлнэ</h3> 
             </div>
-            <img src="image/aside.jpeg" alt="reklam">
-        </article>
-    <aside>
+        </div>
+        <div> 
+            <a href="image/aside.jpeg"> <img src="image/aside.jpeg" height="300" width="950"></a>
+        </div>
+    </article>
        
 
 </body>

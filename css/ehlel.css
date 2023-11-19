@@ -205,7 +205,6 @@ body .nowplaying article a img {
   object-fit: cover;
   border-radius: 5px;
 border-bottom: 110px solid rgba(0, 0, 0, 0.80);
-  
 }
 body .nowplaying h2{
   margin-bottom: 5%;

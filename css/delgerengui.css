@@ -187,7 +187,7 @@ aside video{
     display: flex;
     background-color: #eb0000;
     justify-content: space-between;
-    color: var(--color-white);
+
     }
     
     .reklam-text {
@@ -196,7 +196,7 @@ aside video{
         flex-direction: column;
         align-items: center;
         flex: 1;
-        color: var(--color-white);
+        
     }
     .click-text {
         display: flex;
@@ -209,7 +209,6 @@ aside video{
         border-image: linear-gradient(90deg, transparent, #00f, transparent);
         border-image-slice: 1;
         font-size: 24px;
-        color: var(--color-white);
     }
     footer a  button {
         position: absolute;

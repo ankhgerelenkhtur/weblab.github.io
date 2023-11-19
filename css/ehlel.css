@@ -187,7 +187,7 @@ body .nowplaying div{
 }
 body .nowplaying div {
   display: flex;
-  flex-flow: row wrap; 
+  flex-flow: wrap; 
 }
 body .nowplaying article {
   width: 300px;

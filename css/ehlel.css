@@ -92,6 +92,15 @@ body header .navbutton .next {
   top: 50%;
   
 }
+body header .navbutton .next:hover{
+  width: 35px;
+  height: 25px;
+}
+body header .navbutton .prev:hover{
+  width: 35px;
+  height: 25px;
+}
+
 body main section article a .mname {
   text-decoration: none;
   position: absolute;

@@ -11,21 +11,31 @@ body{
 }
 
 
-footer a  button {
-    position: absolute;
+button{
     z-index: 1;
-    border-radius: 2px;
+    border-radius: 8px;
     border: 1px rgba(0, 56, 255, 0.17);
-    background: #4e535a;
+    background: #717274;
     box-shadow: 0px 0px 0px 1px blue inset;
     color: #fff;
+    height: 20px;
+    width: 35px;
+}
+
+footer a  button {
+    position: absolute;
     margin-top: 10px;
     margin-left: 10px;
     margin-top:  20px;
     margin-left: 20px;
-    height: 20px;
     width: 48px;
 }
+
+
+.Zahialah {
+    width: 170px;
+}
+
 
 .coming{
     position: absolute;
@@ -33,18 +43,39 @@ footer a  button {
     bottom: 90%;
 }
 
-.director{
-    align-items: center;
-    margin-bottom: 80px;
-    margin-top: 40px;
+.coming button{
+    width: 80px;
+}
+.comingsooncast button
+{
+    width: 55px;
+}
+
+.mid {
+    padding: 4%;
+}
+
+.mid h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.director  {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: center;
+    padding-left: 18%;
+    gap: 30%;
+
 }
 
 .director img{
-    border: 1px;
-    border-radius: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
+
 
  
 

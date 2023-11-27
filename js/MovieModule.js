@@ -1,6 +1,4 @@
-// movieModule.js
 
-// Function to fetch movie data from the server
 async function fetchMovieData() {
     try {
       const response = await fetch('https://api.jsonbin.io/b/your-bin-id/latest');
@@ -12,7 +10,7 @@ async function fetchMovieData() {
     }
   }
   
-  // Function to filter movies based on category
+ 
   function filterMoviesByCategory(movies, category) {
     if (!category) {
       return movies;
@@ -21,13 +19,13 @@ async function fetchMovieData() {
     return movies.filter(movie => movie.category.toLowerCase() === category.toLowerCase());
   }
   
-  // Function to read URL parameters
+
   function getUrlParameter(param) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
   }
   
-  // Function to handle movie listing page
+  
   async function handleMovieListingPage() {
     const categoryToFilter = getUrlParameter('category');
     const moviesData = await fetchMovieData();
@@ -35,7 +33,7 @@ async function fetchMovieData() {
     renderMovies(filteredMovies);
   }
   
-  // Function to render movies on the page (replace this with your own rendering logic)
+  
   function renderMovies(movies) {
     const moviesList = document.getElementById('movies-list');
     moviesList.innerHTML = '';
@@ -47,7 +45,7 @@ async function fetchMovieData() {
     });
   }
   
-  // Call the appropriate function based on the page
+ 
   document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
     if (currentPage === 'ehlel.html' || currentPage === 'comingSoon.html') {

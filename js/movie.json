@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Oppenheimer",
+        "category": "Drama",
+        "poster": "image/poster.jpeg",
+        "releaseDate": "2023.09.23",
+        "duration": "120",
+        "link": "delgerengui.html"
+    },
+    {
+        "title": "Batman",
+        "category": "Action",
+        "poster": "image/batman.jpeg",
+        "releaseDate": "2023.09.23",
+        "duration": "150",
+        "link": "delgerengui2.html"
+    },
+    {
+        "title": "Alien",
+        "category": "Sci-Fi",
+        "poster": "image/alien.jpeg",
+        "releaseDate": "2023.09.23",
+        "duration": "130",
+        "link": "delgerengui3.html"
+    },
+    {
+        "title": "The Dark Knight Rises",
+        "category": "Action",
+        "poster": "image/dark.jpeg",
+        "releaseDate": "2023.09.23",
+        "duration": "180",
+        "link": "delgerengui4.html"
+    },
+    {
+        "title": "The Five Nights",
+        "category": "Horror",
+        "poster": "image/dunkirk.png",
+        "releaseDate": "2023.09.23",
+        "duration": "160",
+        "link": "delgerengui5.html"
+    },
+    {
+        "title": "The Pacific Rim",
+        "category": "Sci-Fi",
+        "poster": "image/pacific.jpeg",
+        "releaseDate": "2023.09.23",
+        "duration": "140",
+        "link": "delgerengui6.html"
+    }
+]

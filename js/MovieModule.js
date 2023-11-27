@@ -1,55 +1,42 @@
 
-async function fetchMovieData() {
-    try {
-      const response = await fetch('https://api.jsonbin.io/b/your-bin-id/latest');
+export async function fetchData() {
+  try {
+      const response = await fetch('https://api.jsonbin.io/b/your-bin-id'); // Replace 'your-bin-id' with your actual JSON bin ID
       const data = await response.json();
       return data;
-    } catch (error) {
-      console.error('Error fetching movie data:', error);
+  } catch (error) {
+      console.error('Error fetching data:', error);
       return [];
-    }
   }
-  
- 
-  function filterMoviesByCategory(movies, category) {
-    if (!category) {
-      return movies;
-    }
-  
-    return movies.filter(movie => movie.category.toLowerCase() === category.toLowerCase());
-  }
-  
+}
 
-  function getUrlParameter(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
+export function filterData(data, category) {
+  if (!category) {
+      return data;
   }
-  
-  
-  async function handleMovieListingPage() {
-    const categoryToFilter = getUrlParameter('category');
-    const moviesData = await fetchMovieData();
-    const filteredMovies = filterMoviesByCategory(moviesData, categoryToFilter);
-    renderMovies(filteredMovies);
-  }
-  
-  
-  function renderMovies(movies) {
-    const moviesList = document.getElementById('movies-list');
-    moviesList.innerHTML = '';
-  
-    movies.forEach(movie => {
-      const movieElement = document.createElement('div');
-      movieElement.innerHTML = `<h3>${movie.title}</h3><p>Category: ${movie.category}</p>`;
-      moviesList.appendChild(movieElement);
-    });
-  }
-  
- 
-  document.addEventListener('DOMContentLoaded', () => {
-    const currentPage = window.location.pathname.split('/').pop(); // Get the current page name
-    if (currentPage === 'ehlel.html' || currentPage === 'comingSoon.html') {
-      handleMovieListingPage();
-    }
+
+  return data.filter(movie => movie.category.toLowerCase() === category.toLowerCase());
+}
+
+export function renderMovieList(movies) {
+  const movieListDiv = document.querySelector('.manaidelgetsnee'); // Adjust the selector based on your HTML structure
+  movieListDiv.innerHTML = '';
+
+  movies.forEach(movie => {
+      const movieArticle = document.createElement('article');
+      movieArticle.innerHTML = `
+          <a href="${movie.link}">
+              <img src="${movie.poster}" alt="${movie.title} movie poster">
+              <h3>${movie.title}</h3>
+          </a>
+          <div>
+              <img class="clock" src="/image/clock.png" alt="Clock icon">
+              <p>${movie.duration} МИН</p>
+              <img class="clock" src="/image/calendar.png" alt="Clock icon">
+              <p>${movie.releaseDate}</p>
+              <button class="secondary">Захиалах</button>
+          </div>
+      `;
+      movieListDiv.appendChild(movieArticle);
   });
-  
+}

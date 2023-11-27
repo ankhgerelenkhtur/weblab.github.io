@@ -14,9 +14,7 @@ class Movie {
     new Movie("EXORCIST BELIEVER", "image/exorcist.jpg", "2023.09.23", "DRAMA/HISTORY", "1 цаг 30мин"),
     new Movie("SAW X", "image/saw.jpeg", "2023.09.23", "DRAMA/ACTION", "2 цаг"),
     new Movie("THE PURGE", "image/thepurge.jpeg", "2023.11.30", "HORROR/ACTION", "2 цаг 15мин"),
- 
-  ];
-  
+  ]
 
   function kinoniHTML(movie) {
     return `

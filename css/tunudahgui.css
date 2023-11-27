@@ -13,51 +13,97 @@ body{
 
 button{
     z-index: 1;
-    border-radius: 8px;
-    border: 1px rgba(0, 56, 255, 0.17);
-    background: #717274;
-    box-shadow: 0px 0px 0px 1px blue inset;
+    padding: 4px 8px 4px 8px;
     color: #fff;
-    height: 20px;
-    width: 35px;
+    background: rgba(33, 33, 33, 0.87);
+    
+}
+.date{
+    position: absolute;
+    right: 5%;
+    top: 78%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
 }
 
 footer a  button {
+    border-radius: 8px;
+    border: 1px solid #0B4FFE;
     position: absolute;
-    margin-top: 10px;
-    margin-left: 10px;
     margin-top:  20px;
     margin-left: 20px;
-    width: 48px;
+    
 }
-
-
-.Zahialah {
-    width: 170px;
+.topcomingsoon{
+    position: relative;
 }
-
-
-.coming{
+.buttons{
+    display: flex;
     position: absolute;
-    left: 44%;
-    bottom: 90%;
+    top: 98%;
+    padding-left: 20px;
 }
 
-.coming button{
-    width: 80px;
-}
-.comingsooncast button
-{
-    width: 55px;
+.buttons button{
+    box-shadow: 1px 3px #0B4FFE;
+    border-radius: 8px;
+    border: none;
 }
 
-.mid {
-    padding: 4%;
+.hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+  }
+  .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    
+  }
+  
+.next{
+    padding-left: 20px;
 }
 
-.mid h1{
-    font-size: 40px;
-    margin-bottom: 10px;
+
+.movie-name{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.30);
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    left: 8%;
+    top: 65%;
+    right: 45%;
 }
 
 .director  {

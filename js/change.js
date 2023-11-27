@@ -21,7 +21,7 @@ function updatePosterContent() {
     
     var movieDetails = [
         { title: 'OPPENHEIMER', date: '2023.10.15', genre: 'DRAMA/HISTORY', background: 'url(/image/poster.jpeg) center/cover no-repeat', boxShadow: '0 4px 32px 0 #F00' }, 
-        { title: 'NAPOLEON', date: '2023.11.30', genre: 'DRAMA/HISTORY', background: 'url(/image/post2.jpg) center/cover no-repeat', boxShadow: '0 4px 32px 0 rgb(192, 137, 66)' },
+        { title: 'NAPOLEON', date: '2023.11.30', genre: 'DRAMA/HISTORY', background: 'url(/image/post2.jpg) center/cover no-repeat', boxShadow: '0 4px 32px 0 rgb(192, 57, 66)' },
         { title: 'PACIFIC RIM', date: '2023.10.15', genre: 'ACTION/FICTION', background: 'url(/image/rim.jpg) center/cover no-repeat', boxShadow: '0 4px 32px 0 rgb(0, 153, 255)' },
         { title: '13 HOURS', date: '2023.10.15', genre: 'ACTION/FICTION', background: 'url(/image/post4.jpeg) center/cover no-repeat', boxShadow: '0 4px 32px 0 rgb(0, 0, 0)' }
     

@@ -24,7 +24,7 @@ body h2 {
 ul {
   list-style: none;
   padding: 0;
-  align-items: center;
+ margin-left: 38%;
 }
 
 li {
@@ -52,7 +52,7 @@ body header nav ul {
   top: 2%;
   border-radius: 10px;
   background: rgba(50, 50, 50, 0.21);
-  margin-left: 15%;
+    margin-left: 20%;
   color: var(--color-white, #fff);
   text-align: center;
   font: 12.25px bold Arial, sans-serif;

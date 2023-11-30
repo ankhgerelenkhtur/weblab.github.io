@@ -24,7 +24,7 @@ body h2 {
 ul {
   list-style: none;
   padding: 0;
- margin-left: 38%;
+  align-items: center;
 }
 
 li {

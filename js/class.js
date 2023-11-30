@@ -52,8 +52,7 @@ class Movie {
   
   function insertMovies() {
     const movieContainer = document.querySelector('.manaidelgetsnee');
-  
-    
+
     fetch('/js/movie.json')
       .then(response => response.json())
       .then(jsonData => {
@@ -62,7 +61,7 @@ class Movie {
           movieContainer.insertAdjacentHTML('beforeend', movieHTML);
         });
       })
-      .catch(error => console.error('Error fetching JSON:', error));
+      .catch(error => console.error('Error JSON:', error));
   } 
   document.addEventListener('DOMContentLoaded', insertMovies);
   

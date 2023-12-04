@@ -16,13 +16,14 @@ async function main() {
         const elem = document.getElementById("movies");
         elem.innerHTML = filteredMovies.map((movie) => {
             return `<article> 
-                <a href="delgerengui.html"><img src="${movie.poster}" alt="Oppenheimer movie poster"><h3>${movie.title}</h3></a>
+                <a href="${movie.link}"><img src="${movie.poster}" alt="Oppenheimer movie poster"><h3>${movie.title}</h3></a>
                 <div class="group"> <img class="cal" src="image/calendar.png" alt="calendar icon"> 
-                <a class="more" href="/delgerengui.html" aria-label="Learn more about Oppenheimer"> Дэлгэрэнгүй</a>
+                <a class="more" href="${movie.link}" aria-label="Learn more about Oppenheimer"> Дэлгэрэнгүй</a>
                 <h4>${movie.garahhugatsaa}</h4>
                 <p>Төрөл: ${movie.torol} - Үргэжлэх хугацаа: ${movie.urgeljlehhugatsaa}</p></div>
             </article>`;
-        }).join(""); 
+        }).join("");
+        
     } catch (error) {
         console.error(error);
     }

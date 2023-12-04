@@ -59,7 +59,7 @@ body .nowplaying {
   }
   body .nowplaying div article .group h4{
     position: relative;
-    left: -95px;
+    left: -30%;
     top: 13px;
     color: var(--color-white);
   

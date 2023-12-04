@@ -14,8 +14,7 @@
     --border-size: 0.0001rem;
     --image-size: 2rem;
     --color-blue: #0B4FFE;
-  
-   
+    --color-hard-blue: #1946e9;
     --color-line : var(--color-line);
     --color-bg : var(--color-black);
     --color-garchig-main : var(--color-white);
@@ -23,7 +22,6 @@
     --color-border-line: var(--color-white);
     --color-border-li:var(--color-gray);
     --color-footer-text: var(--color-bright-gray);
-
     --font-header: Arial, Helvetica, sans-serif;
    --font-section-title: Arial; 
     --font-text-engiin: Roboto, sans-serif;
@@ -31,6 +29,5 @@
     --font-size-movie: 2rem;
     --font-size-small: 0.8rem;
     --font-size-reting: 0.6rem;
-
     --percent-hundred: 100%;
 }

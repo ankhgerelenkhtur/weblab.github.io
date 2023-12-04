@@ -17,8 +17,10 @@ body h2 {
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  background-color: #1946e9; 
- 
+  background-color: var(--color-hard-blue); 
+}
+.filter a:hover{
+  border-bottom: 2.5px solid var(--color-white);
 }
 
 ul {
@@ -293,7 +295,7 @@ body .nowplaying div article h3{
 
 }
 .comingsoon article div{
-  color: var(--color-gray);
+  color: var(--color-white);
   margin-left: 10%;
 }
 .comingsoon article a img {
@@ -452,6 +454,15 @@ footer section h4{
   transition: transform 0.3s;
  
 }
+.poster1 {
+  display: block;
+}
+@media screen and (max-width: 1189px) {
+  .poster1 {
+      display: none;
+  }
+}
+
 .comingsoon article img:hover {
   transform: scale(1.1); 
   box-shadow: 0 4px 32px 0 #981a1a;

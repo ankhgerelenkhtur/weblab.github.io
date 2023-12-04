@@ -1,7 +1,7 @@
 async function main() {
     const urlParams = new URLSearchParams(window.location.search);
 
-    const url = 'https://api.jsonbin.io/v3/b/6568364154105e766fd794af';
+    const url = 'https://api.jsonbin.io/v3/b/656d72bb0574da7622cfe94a';
     const options = {
         method: 'GET',
         headers: {
@@ -27,5 +27,4 @@ async function main() {
         console.error(error);
     }
 }
-
 window.onload = main;

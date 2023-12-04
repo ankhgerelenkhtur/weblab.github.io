@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <script src="js/book.js"></script>
+    <link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+
+    <section class="booking-section">
+        <h2>КИНОНУУД</h2>
+
+        <article class="movie" data-title="Movie" data-genre="ACTION" data-duration="2 цаг 30 минут" data-price="10">
+            <img src="image/poster.jpeg" alt="Movie 1 Poster">
+            <div class="movie-details">
+                <h3>Oppenheimer</h3>
+                <p>Төрөл: ACTION</p>
+                <p>Үргэлжлэх хугацаа: 2 цаг 30 минут</p>
+                <p>Үнэ: 10</p>
+                <button class="book-button" aria-label="Book Now" onclick="addToBookingCard(this)">Захиалах</button>
+            </div>
+        </article>
+
+        <article class="movie" data-title="Movie" data-genre="ACTION" data-duration="2 цаг 30 минут" data-price="10">
+            <img src="image/pacific.jpeg" alt="Movie 1 Poster">
+            <div class="movie-details">
+                <h3>THE PACIFIC RIM</h3>
+                <p>Төрөл: ACTION</p>
+                <p>Үргэлжлэх хугацаа: 2 цаг 30 минут</p>
+                <p>Үнэ: 10</p>
+                <button class="book-button" aria-label="Book Now" onclick="addToBookingCard(this)">Захиалах</button>
+            </div>
+        </article>
+
+        <article class="movie" data-title="Movie" data-genre="ACTION" data-duration="2 цаг 30 минут" data-price="10">
+            <img src="image/saw.jpeg" alt="Movie 1 Poster">
+            <div class="movie-details">
+                <h3>SAW X</h3>
+                <p>Төрөл: ACTION</p>
+                <p>Үргэлжлэх хугацаа: 2 цаг 30 минут</p>
+                <p>Үнэ: 10</p>
+                <button class="book-button" aria-label="Book Now" onclick="addToBookingCard(this)">Захиалах</button>
+            </div>
+        </article>
+
+    </section>
+
+    <div class="booking-card" id="bookingCard">
+        <h2>Захиалсан кинонууд</h2>
+        <ul class="shopping-list" id="bookingList"></ul>
+        <div class="total-price" id="totalPrice">Нийт үнэ: MNT: 0</div>
+    </div>
+
+    <div class="shopping-icon" data-count="0" onmouseover="showBookingCard()" onmouseout="hideBookingCard()">🛒</div>
+    
+</body>
+</html>

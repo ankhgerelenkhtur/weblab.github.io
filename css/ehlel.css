@@ -198,7 +198,7 @@ body main section article .secondary {
   left: -10%;
 }
 body .nowplaying {
-  padding-top: 5%;
+  padding-top: 3%;
   background: radial-gradient(80% 80% at 50% 50%, rgba(153, 44, 36, 0.938) 0%, #200909 85.94%);
   color: var(--color-white, #fff); 
   background: radial-gradient(70.71% 70.71% at 50% 50%, rgba(2, 77, 238, 0.29) 0%, #000 85.94%);
@@ -220,11 +220,12 @@ body .nowplaying div{
 body .nowplaying div {
   display: flex;
   flex-flow: wrap; 
+
 }
 body .nowplaying article {
+ 
   width: 300px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 0 2rem 2rem 2rem; /* Adjust the margin-bottom value */
   object-fit: contain;
 }
 body .nowplaying article a {

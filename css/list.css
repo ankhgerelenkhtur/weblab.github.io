@@ -75,8 +75,6 @@ body .nowplaying {
     left: 150px;
     bottom: -35px;
     color: var(--color-lightblue);
-   
-    
   }
   body .nowplaying div article h3{
     position: relative;
@@ -86,4 +84,11 @@ body .nowplaying {
     z-index: 1;
     font-size: 25px;
     text-align: center;
+  }
+  .nowplaying article:hover p {
+    color: white; 
+    font-weight: bold; 
+  }
+  .nowplaying article p {
+    transition: color 0.3s ease, font-weight 0.3s ease; 
   }

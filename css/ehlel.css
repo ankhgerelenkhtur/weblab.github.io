@@ -25,13 +25,14 @@ body h2 {
 
 ul {
   list-style: none;
-  padding: 0;
- margin-left: 38%;
+  display: flex;
+  margin-left: 32%;
 }
 
 li {
   display: inline-block; 
   margin-right: 20px; 
+
 }
 
 a {

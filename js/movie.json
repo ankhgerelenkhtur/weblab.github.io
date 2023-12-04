@@ -1,25 +1,64 @@
 [
-    {
-      "title": "EXORCIST BELIEVER",
-      "poster": "image/exorcist.jpg",
-      "garahhugatsaa": "2023.09.23",
-      "torol": "DRAMA/HISTORY",
-      "urgeljlehhugatsaa": "1 цаг 30мин"
-    },
-    {
-      "title": "SAW X",
-      "poster": "image/saw.jpeg",
-      "garahhugatsaa": "2023.09.23",
-      "torol": "DRAMA/ACTION",
-      "urgeljlehhugatsaa": "2 цаг"
-    },
-    {
-      "title": "THE PURGE",
-      "poster": "image/thepurge.jpeg",
-      "garahhugatsaa": "2023.11.30",
-      "torol": "HORROR/ACTION",
-      "urgeljlehhugatsaa": "2 цаг 15мин"
-    }
-
-  ]
-  
+    
+  {
+    "title": "BATMAN",
+    "poster": "image/batman.jpeg",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "DRAMA/ACTION",
+    "urgeljlehhugatsaa": "2 цаг",
+    "link": "delgerengui2.html"
+  },
+  {
+    "title": "ALIEN",
+    "poster": "image/alien.jpeg",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "ACTION/FICTION",
+    "urgeljlehhugatsaa": "2 цаг",
+    "link": "delgerengui3.html"
+  },
+  {
+    "title": "THE DARK KNIGHT RISES",
+    "poster": "image/dark.jpeg",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "ANIME/DRAMA",
+    "urgeljlehhugatsaa": "3 цаг",
+    "link": "delgerengui4.html"
+  },
+  {
+    "title": "THE FIVE NIGHTS",
+    "poster": "image/dunkirk.png",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "ACTION/HISTORY",
+    "urgeljlehhugatsaa": "3 цаг",
+    "link": "delgerengui5.html"
+  },
+  {
+    "title": "THE PACIFIC RIM",
+    "poster": "image/pacific.jpeg",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "SCIENTIFIC/DRAMA",
+    "urgeljlehhugatsaa": "3 цаг",
+    "link": "delgerengui6.html"
+  },
+  {
+    "title": "EXORCIST BELIEVER",
+    "poster": "image/exorcist.jpg",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "DRAMA/HISTORY",
+    "urgeljlehhugatsaa": "1 цаг 30мин"
+  },
+  {
+    "title": "SAW X",
+    "poster": "image/saw.jpeg",
+    "garahhugatsaa": "2023.09.23",
+    "torol": "DRAMA/ACTION",
+    "urgeljlehhugatsaa": "2 цаг"
+  },
+  {
+    "title": "THE PURGE",
+    "poster": "image/thepurge.jpeg",
+    "garahhugatsaa": "2023.11.30",
+    "torol": "HORROR/ACTION",
+    "urgeljlehhugatsaa": "2 цаг 15мин"
+  }
+]

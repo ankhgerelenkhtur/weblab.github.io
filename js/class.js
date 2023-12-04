@@ -34,7 +34,7 @@ class Movie {
   function kinoniHTML(movie) {
     return `
       <article>
-          <a href="delgerengui.html">
+          <a href="${movie.link}">
               <img src="${movie.poster}" alt="${movie.title} movie poster">
               <h3>${movie.title}</h3>
           </a>
@@ -47,6 +47,7 @@ class Movie {
       </article>
     `;
   }
+  
   
   function insertMovies() {
     const movieContainer = document.querySelector('.manaidelgetsnee');

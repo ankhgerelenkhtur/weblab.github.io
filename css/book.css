@@ -1,7 +1,7 @@
 .booking-section {
     margin-top: 30px;
 }
-*{
+body{
 
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
@@ -35,7 +35,7 @@
 
 .movie p {
     margin: 5px 0;
-    color: rgb(0, 0, 0);
+    
 }
 
 .book-button {
@@ -93,4 +93,14 @@
 .total-price {
     margin-top: 10px;
     font-weight: bold;
+}
+
+.dark{
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+.dark-mode{
+    background-color: black;
+    color: white;
 }

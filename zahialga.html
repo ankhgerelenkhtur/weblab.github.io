@@ -51,6 +51,14 @@
     </div>
 
     <div class="shopping-icon" data-count="0" onmouseover="showBookingCard()" onmouseout="hideBookingCard()">🛒</div>
-    
+    <div class="dark">
+        <button onclick="darkMode()" >Darkmode</button>
+    </div>
+    <script>
+        function darkMode(){
+            var element = document.body;
+            element.classList.toggle("dark-mode")
+        }
+    </script>    
 </body>
 </html>

@@ -16,7 +16,6 @@ class DarkModeToggle extends HTMLElement {
     document.documentElement.style.setProperty('--background-color', this.darkMode ? '#333' : '#fff');
     document.documentElement.style.setProperty('--text-color', this.darkMode ? '#fff' : '#333');
 
-    // Additional styles for specific elements in dark mode
     const bookingCard = document.getElementById('bookingCard');
     const bookingList = document.getElementById('bookingList');
     const totalPriceElement = document.getElementById('totalPrice');

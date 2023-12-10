@@ -6,6 +6,11 @@ body{
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
 }
+footer a button{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
 .booking-section h2{
     margin-left: 50%;
 }
@@ -39,12 +44,20 @@ body{
 }
 
 .book-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  display: flex;
+  width: 88px;
+  height: 30px;
+  padding: 8px 16px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px;
+  border: 0.5px solid #0B4FFE;
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 1px #0768AF inset;
+  color: #000000;
+  text-align: center;
+  font: 12.25px Arial, sans-serif;
+  text-transform: uppercase;
 }
 
 .booking-card {
@@ -57,49 +70,94 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none;
 }
-
 .shopping-icon {
-    position: fixed;
-    top: 35px;
-    right: 100px;
-    font-size: 24px;
-    color: #3498db;
-    cursor: pointer;
+  position: fixed;
+  top: 35px;
+  right: 100px;
+  font-size: 24px;
+  color: #3498db;
+  cursor: pointer;
+  z-index: 2; /* Ensure the shopping icon is above other elements */
 }
 
 .shopping-icon::before {
-    content: attr(data-count);
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: red;
-    color: white;
-    border-radius: 100%;
-    padding: 3px;
-    font-size: 12px;
+  content: attr(data-count);
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  padding: 3px;
+  font-size: 12px;
+}
+
+.shopping-icon:hover::before {
+  background-color: #3498db; /* Change the background color on hover */
 }
 
 .shopping-list {
-    list-style: none;
-    padding: 0;
-    margin-right: 10%;
+  list-style: none;
+  padding: 0;
+  margin-right: 10%;
+  z-index: 1; /* Ensure the shopping list is below other elements */
 }
 
 .shopping-list li {
-    margin-bottom: 5px;
-    color: #ea0000;
+  margin-bottom: 5px;
+  color: #ea0000;
+  background-color: white; /* Add a background color to make it clickable */
+  padding: 3px; /* Add some padding for better clickability */
+}
+
+.shopping-list li:hover {
+  background-color: #3498db; 
+  color: white; 
+}
+
+.shopping-list li button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #ea0000;
+  font-weight: bold;
+}
+
+.shopping-list li button:hover {
+  text-decoration: underline;
 }
 
 .total-price {
-    margin-top: 10px;
-    font-weight: bold;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
+.dark-mode #bookingCard {
+  background-color: #000;
+}
+
+.dark-mode #bookingCard,
+.dark-mode #bookingCard h2,
+.dark-mode #bookingCard ul,
+.dark-mode #bookingCard .total-price {
+  color: #ffffff;
+}
+
+.dark-mode .total-price {
+  color: black;
+  background-color: #000000;
+}
+.dark-mode .book-button{
+  color: white;
+}
 .dark-mode{
     background: black;
-    color: white;
+    color: rgb(255, 255, 255);
 }
-
+.dark-mode .shopping-list li {
+  background-color: #000000; /* Set your preferred background color for list items in dark mode */
+  color: #fff; /* Set your preferred text color for list items in dark mode */
+}
 :root {
     --light: #d8dbe0;
     --dark: #28292c;
@@ -175,6 +233,27 @@ body{
 
   .dark{
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 3%;
+    right: 25%;
   }
+ 
+  footer a  button {
+    border-radius: 5px;
+    border: 1px rgba(0, 56, 255, 0.17);
+    background: rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 0px 0px 1px blue inset;
+    color: #fff;
+    margin-top:  20px;
+    margin-left: 20px;
+    height: 20px;
+    width: 55px;
+}
+.booking-card button{
+
+  background-color: #2a2a2a;
+  color: #fff;
+  margin-top:  20px;
+  margin-left: 20px;
+  height: 20px;
+  width: 55px;
+}

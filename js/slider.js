@@ -46,7 +46,7 @@ function updatePosterContent() {
                 <p class="time">${currentMovie.date}</p>
                 <p class="genre">ТӨРӨЛ: ${currentMovie.genre}</p>
             </div>
-            <button class="secondary" aria-label="Book now">Захиалах</button>
+           <a href="zahialga.html"> <button class="secondary" aria-label="Book now">Захиалах</button></a> 
             <a class="more" href="delgerengui.html">Дэлгэрэнгүй</a>
         </article>
     `;

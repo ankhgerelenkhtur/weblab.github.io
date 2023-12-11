@@ -50,7 +50,7 @@ footer a button{
   padding: 8px 16px;
   flex-direction: column;
   align-items: center;
-  border-radius: 24px;
+  border-radius: 9999px;
   border: 0.5px solid #0B4FFE;
   background: rgba(0, 0, 0, 0);
   box-shadow: 0 0 0 1px #0768AF inset;
@@ -58,6 +58,7 @@ footer a button{
   text-align: center;
   font: 12.25px Arial, sans-serif;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .booking-card {
@@ -69,6 +70,7 @@ footer a button{
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none;
+  
 }
 .shopping-icon {
   position: fixed;
@@ -77,7 +79,7 @@ footer a button{
   font-size: 24px;
   color: #3498db;
   cursor: pointer;
-  z-index: 2; /* Ensure the shopping icon is above other elements */
+  z-index: 2; 
 }
 
 .shopping-icon::before {
@@ -93,21 +95,21 @@ footer a button{
 }
 
 .shopping-icon:hover::before {
-  background-color: #3498db; /* Change the background color on hover */
+  background-color: #3498db; 
 }
 
 .shopping-list {
   list-style: none;
   padding: 0;
   margin-right: 10%;
-  z-index: 1; /* Ensure the shopping list is below other elements */
+  z-index: 1;
 }
 
 .shopping-list li {
   margin-bottom: 5px;
   color: #ea0000;
-  background-color: white; /* Add a background color to make it clickable */
-  padding: 3px; /* Add some padding for better clickability */
+  background-color: white; 
+  padding: 3px;
 }
 
 .shopping-list li:hover {
@@ -256,4 +258,12 @@ footer a button{
   margin-left: 20px;
   height: 20px;
   width: 55px;
+}
+.movie-details{
+  border-left: 5px solid #0B4FFE;
+  padding-left: 10px;
+}
+.book-button:hover{
+  background-color: #0B4FFE;
+  color: white;
 }

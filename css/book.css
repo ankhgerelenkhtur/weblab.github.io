@@ -167,15 +167,15 @@ footer a button{
 
 .toggle-switch {
     position: relative;
-    width: 200px;
+    width: 80px;
   }
   
   label {
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 30px;
     background-color: var(--dark);
-    border-radius: 50px;
+    border-radius: 30px;
     cursor: pointer;
   }
   
@@ -199,10 +199,10 @@ footer a button{
   .slider::before {
     content: "";
     position: absolute;
-    top: 13px;
-    left: 16px;
-    width: 75px;
-    height: 75px;
+    top: 5px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     box-shadow: inset 28px -4px 0px 0px var(--light);
     background-color: var(--dark);
@@ -210,7 +210,7 @@ footer a button{
   }
   
   input:checked ~ .slider::before {
-    transform: translateX(95px);
+    transform: translateX(40px);
     background-color: var(--dark);
     box-shadow: none;
   }
@@ -233,8 +233,8 @@ footer a button{
 
   .dark{
     position: absolute;
-    top: 3%;
-    right: 25%;
+    top: 5%;
+    right: 10%;
   }
  
   footer a  button {

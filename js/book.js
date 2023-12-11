@@ -91,7 +91,7 @@ function addToBookingCard(button) {
 
   const bookingList = document.getElementById('bookingList');
   const listItem = document.createElement('li');
-  listItem.textContent = `${title} - ${genre} (${duration}) - $${price}`;
+  listItem.textContent = `${title} - ${genre} (${duration}) - MNT :${price}`;
 
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'DECLINE';
@@ -187,7 +187,7 @@ function loadFromLocalStorage() {
 
     bookedMovies.forEach((movie) => {
       const listItem = document.createElement('li');
-      listItem.textContent = `${movie.title} - ${movie.genre} (${movie.duration}) - $${movie.price}`;
+      listItem.textContent = `${movie.title} - ${movie.genre} (${movie.duration}) - MNT${movie.price}`;
 
       const deleteButton = document.createElement('button');
       deleteButton.textContent = 'DECLINE';

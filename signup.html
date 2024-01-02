@@ -16,13 +16,12 @@
 <body>
   <section class="signupc">
     <h2>Бүртгүүлэх</h2>
-    <form action="/signup" method="post" id="signup-form">
-        <input placeholder="Example@gmail.com" type="email" id="email" name="email" required>
-        <input placeholder="Username" type="text" id="new-username" name="newUsername" required>
-        <input placeholder="Password" type="password" id="new-password" name="newPassword" required>
-        <button type="submit">Sign Up</button>
-      </form>
-      
+    <form action="http://localhost:3000/api/auth/signup" method="post" id="signup-form">
+      <input placeholder="Example@gmail.com" type="email" id="email" name="email" required>
+      <input placeholder="Username" type="text" id="username" name="username" required>
+      <input placeholder="Password" type="password" id="new-password" name="newPassword" required>
+      <button type="submit">Sign Up</button>
+    </form>
     <p class="login-link">Already have an account? <a href="/login.html">Go back to login</a></p>
   </section>
 </body>

@@ -1,0 +1,22 @@
+<!-- views/login.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <h2>НЭВТРЭХ</h2>
+  <form action="/api/auth/login" method="post" id="login-form">
+    <input placeholder="Username" type="text" id="username" name="username" required>
+    <input placeholder="Password" type="password" id="password" name="password" required>
+    <button type="submit">Login</button>
+  </form>
+  <div class="links">
+    <a href="#" id="forgot-password-link">Forgot Password?</a>
+    <span> | </span>
+    <a href="signup.html">Sign Up</a>
+  </div>
+</body>
+</html>

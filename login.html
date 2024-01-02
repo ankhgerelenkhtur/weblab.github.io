@@ -22,43 +22,14 @@
       <input placeholder="Username" type="text" id="username" name="username" required>
      
       <input placeholder="Password" type="password" id="password" name="password" required>
-
-      <button type="submit">Login</button>
+      <button class="sub" type="submit">Login</button>
     </form>
     <div class="links">
       <a href="#" id="forgot-password-link">Forgot Password?</a>
       <span> | </span>
       <a href="signup.html">Sign Up</a>
     </div>
+    <a href="index.html" > <button class="prev">ГАРАХ</button> </a>
   </section>
 </body>
-<!-- Add this script at the end of your login.html file -->
-<script>
-  document.getElementById('login-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-
-    // Perform the login request
-    const response = await fetch('http://localhost:3000/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
-      // Login successful, show alert
-      alert('Login successful!');
-    } else {
-      // Login failed, show alert with the error message
-      alert('Login failed: ' + data.error);
-    }
-  });
-</script>
-
 </html>

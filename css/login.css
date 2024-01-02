@@ -16,6 +16,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 300px;
     text-align: center;
+    box-shadow: 10px 10px var(--color-blue);
   }
   
   h2 {
@@ -38,7 +39,7 @@ body {
 
   }
   
-  button {
+.sub {
     padding: 5%;
     background-color: var(--color-bg);
     color: white;
@@ -66,4 +67,13 @@ body {
     color: var(--color-bg);
   }
 
-  
+.prev{
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-blue);
+  background: var(--color-bg);
+}

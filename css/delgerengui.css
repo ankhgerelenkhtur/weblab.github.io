@@ -102,9 +102,11 @@ color: var(--color-white);
 .bottom-section article h3{
     margin-left: 5%;
     margin-right: 5%;
-    padding-bottom: 5px;
+
+    padding-bottom: 15px;
     display: inline-block;
     border-bottom: 1px solid var(--color-gray); 
+
     margin-bottom: 2%;
    font-family: var(--font-text-engin);
    text-align: center;
@@ -124,15 +126,16 @@ color: var(--color-white);
     flex-wrap: wrap;
   }
   .actors img{
-    border-radius: 150px;
-    object-fit:inherit;
+    border-radius: 9999px;
+    object-fit: fill;
+    width: 50%;
+    height: 50%;
   }
   
   .actor {
     margin: 10px;
     text-align: center;
     flex: 1;
-    margin-bottom: 5%;
   }  
  .movief h2{
    margin-left: 5%;

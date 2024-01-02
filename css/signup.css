@@ -20,6 +20,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 300px;
     text-align: center;
+    box-shadow: 10px 10px var(--color-blue);
   }
   
   h2 {

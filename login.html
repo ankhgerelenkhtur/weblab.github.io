@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Movie Theatre, URGUU">
-  <meta name="keywords" content="Movie Theatre, URGUU">
-  <meta name="author" content="Ankhaa">  
-  <meta property="og:title" content="Sign Up">
-  <meta property="og:description" content="Movie Theatre, URGUU">
-  <script src="/js/db/server.js"></script>
-
-  <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/root.css">
-  <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Movie Theatre, URGUU">
+    <meta name="keywords" content="Movie Theatre, URGUU">
+    <meta name="author" content="Ankhaa">
+    <meta property="og:title" content="Sign Up">
+    <meta property="og:description" content="Movie Theatre, URGUU">
+    <script src="/js/db/server.js"></script>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <title>Login</title>
 </head>
 <body>
-  <section class="loginc">
-    <h2>НЭВТРЭХ</h2>
-    <form action="http://localhost:3000/api/auth/login" method="post" id="login-form">
+  <script>
+    async function handleLogin(event) {
+        event.preventDefault(); 
 
-      <input placeholder="Username" type="text" id="username" name="username" required>
-     
-      <input placeholder="Password" type="password" id="password" name="password" required>
-      <button class="sub" type="submit">Login</button>
-    </form>
-    <div class="links">
-      <a href="#" id="forgot-password-link">Forgot Password?</a>
-      <span> | </span>
-      <a href="signup.html">Sign Up</a>
-    </div>
-    <a href="index.html" > <button class="prev">ГАРАХ</button> </a>
-  </section>
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch('http://localhost:3000/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username,
+                    password,
+                }),
+            });
+
+            const data = await response.json();
+            console.log('Login request:', { username, password });
+            console.log('Query result:', data);
+
+            if (data.success) {
+                alert('Login successful!');
+                window.location.href = 'index.html';
+            } else {
+                alert('Login fail.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error.');
+        }
+    }
+
+</script>
+    <section class="loginc">
+        <h2>НЭВТРЭХ</h2>
+        <form action="http://localhost:3000/api/auth/login" method="post" id="login-form">
+          <input placeholder="Username" type="text" id="username" name="username" required>
+          <input placeholder="Password" type="password" id="password" name="password" required>
+          <button class="sub" type="submit">Login</button>
+      </form>
+        <div class="links">
+            <a href="#" id="forgot-password-link">Forgot Password?</a>
+            <span> | </span>
+            <a href="signup.html">Sign Up</a>
+        </div>
+        <a href="index.html" ><button class="prev">ГАРАХ</button></a>
+    </section>
+    <script>
+      document.getElementById('login-form').addEventListener('submit', handleLogin);
+  </script>
 </body>
 </html>

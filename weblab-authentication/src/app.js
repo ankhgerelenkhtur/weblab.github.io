@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const pool = require('./db');
 const app = express();
@@ -20,64 +19,60 @@ app.get('/signup', (req, res) => {
 });
 
 app.post('/api/auth/signup', async (req, res) => {
-    try {
-        const { email, username, newPassword } = req.body;
+  try {
+      const { email, username, newPassword } = req.body;
 
-        if (!newPassword) {
-            res.status(400).json({ success: false, error: 'New password is required' });
-            return;
-        }
+      console.log('Received signup request:', { email, username, newPassword });
 
-        const hashedPassword = await bcrypt.hash(newPassword, 10);
+      if (!newPassword) {
+          res.status(400).json({ success: false, error: 'New password is required' });
+          return;
+      }
 
-        const result = await pool.query(
-            'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
-            [email, username, hashedPassword]
-        );
+      const result = await pool.query(
+          'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
+          [email, username, newPassword] 
+      );
 
-        res.json({ success: true, user: result.rows[0] });
-    } catch (error) {
-        console.error('Error signing up:', error.message);
-        res.status(500).json({ success: false, error: 'Error signing up' });
-    }
+      res.json({ success: true, user: result.rows[0] });
+  } catch (error) {
+      console.error('Error signing up:', error.message);
+      res.status(500).json({ success: false, error: 'Error signing up' });
+  }
 });
 
 app.post('/api/auth/login', async (req, res) => {
   try {
-      const { username, password } = req.body;
+    const { username, password } = req.body;
 
-      console.log('Login request:', { username, password });
+    const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
 
-      const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+    if (result.rows.length === 0) {
+      console.log('User not found');
+      res.status(401).json({ success: false, error: 'Invalid credentials' });
+      return;
+    }
 
-      console.log('Query result:', result.rows);
+    const user = result.rows[0];
+    console.log('Query result:', result.rows);
 
-      if (result.rows.length === 0) {
-          console.log('Invalid username');
-          res.status(401).json({ success: false, error: 'Invalid credentials' });
-          return;
-      }
+    const passwordMatch = password === user.password;
 
-      const user = result.rows[0];
-      const passwordMatch = await bcrypt.compare(password, user.password);
+    if (!passwordMatch) {
+      console.log('Password match: false');
+      res.status(401).json({ success: false, error: 'Invalid password' });
+      return;
+    }
 
-      console.log('Password match:', passwordMatch);
+    console.log('Login successful');
+    const token = jwt.sign({ userId: user.id, username: user.username }, 'yourSecretKey', {
+      expiresIn: '1h',
+    });
 
-      if (!passwordMatch) {
-          console.log('Invalid password');
-          res.status(401).json({ success: false, error: 'Invalid credentials' });
-          return;
-      }
-
-      const token = jwt.sign({ userId: user.id, username: user.username }, 'yourSecretKey', {
-          expiresIn: '1h',
-      });
-
-      console.log('Login successful');
-      res.json({ success: true, token });
+    res.json({ success: true, token });
   } catch (error) {
-      console.error('Error logging in:', error.message);
-      res.status(500).json({ success: false, error: 'Error logging in' });
+    console.error('Error logging in:', error.message);
+    res.status(500).json({ success: false, error: 'Error logging in' });
   }
 });
 
@@ -86,22 +81,21 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/api/users/add', async (req, res) => {
-    try {
-        const { email, username, password } = req.body;
+  try {
+      const { email, username, newPassword } = req.body;
 
-        const hashedPassword = await bcrypt.hash(password, 10);
+      const result = await pool.query(
+          'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
+          [email, username, newPassword]
+      );
 
-        const result = await pool.query(
-            'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
-            [email, username, hashedPassword]
-        );
-
-        res.json({ success: true, user: result.rows[0] });
-    } catch (error) {
-        console.error('Error adding user:', error.message);
-        res.status(500).json({ success: false, error: 'Error adding user' });
-    }
+      res.json({ success: true, user: result.rows[0] });
+  } catch (error) {
+      console.error('Error adding user:', error.message);
+      res.status(500).json({ success: false, error: 'Error adding user' });
+  }
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

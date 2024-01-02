@@ -8,7 +8,7 @@ class BookingApp extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.innerHTML = `
       <style>
-          /* Add your styles here */
+       
       </style>
       <div class="booking-card" id="bookingCard">
           <h2>Захиалсан кинонууд</h2>

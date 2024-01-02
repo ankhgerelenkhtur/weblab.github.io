@@ -1,3 +1,4 @@
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -11,25 +12,32 @@ app.use(cors());
 app.use(bodyParser.json());
 app.set('view engine', 'ejs'); 
 app.use(express.static(__dirname + '/public')); 
+app.get('/signup', (req, res) => {
+    res.render('signup');
+});
 
 app.post('/api/auth/signup', async (req, res) => {
     try {
-      const { email, username, newPassword } = req.body;
-  
-      const hashedPassword = await bcrypt.hash(newPassword, 10);
-  
-      const result = await pool.query(
-        'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
-        [email, username, hashedPassword]
-      );
-  
-      res.json({ success: true, user: result.rows[0] });
+        const { email, username, newPassword } = req.body;
+
+        if (!newPassword) {
+            res.status(400).json({ success: false, error: 'New password is required' });
+            return;
+        }
+
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        const result = await pool.query(
+            'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
+            [email, username, hashedPassword]
+        );
+
+        res.json({ success: true, user: result.rows[0] });
     } catch (error) {
-      console.error('Error signing up:', error.message);
-      res.status(500).json({ success: false, error: 'Error signing up' });
+        console.error('Error signing up:', error.message);
+        res.status(500).json({ success: false, error: 'Error signing up' });
     }
 });
-
 app.post('/api/auth/login', async (req, res) => {
     try {
       const { username, password } = req.body;
@@ -59,7 +67,6 @@ app.post('/api/auth/login', async (req, res) => {
       res.status(500).json({ success: false, error: 'Error logging in' });
     }
 });
-
 app.get('/login', (req, res) => {
     res.render('login');
 });

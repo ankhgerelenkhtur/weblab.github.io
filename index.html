@@ -20,6 +20,16 @@
     </head>
 
 <body>
+    <div class="loading-screen">
+        <div class="loader"></div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.loading-screen').style.display = 'none';
+            document.querySelector('.content-container').style.display = 'block';
+        });
+    </script>
+    
     <header>
         <nav class="navbar">
             <ul>

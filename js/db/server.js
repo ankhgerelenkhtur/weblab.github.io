@@ -6,14 +6,12 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// Middleware to parse incoming JSON and urlencoded data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Serve static files from the 'public' folder
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// PostgreSQL client setup
 const client = new Client({
   user: 'ankhaa',
   host: 'localhost',
@@ -22,7 +20,6 @@ const client = new Client({
   port: 5432,
 });
 
-// Connect to PostgreSQL
 client.connect()
   .then(() => {
     console.log('Connected to the PostgreSQL database');
@@ -71,7 +68,6 @@ process.on('SIGINT', () => {
     process.exit();
   });
   
-  // Start the server
   app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
   });

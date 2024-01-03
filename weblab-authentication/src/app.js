@@ -8,7 +8,6 @@ const port = 3000;
 const path = require('path');
 
 app.set('views', path.join(__dirname, 'views'));
-
 app.use(cors());
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
@@ -22,7 +21,7 @@ app.post('/api/auth/signup', async (req, res) => {
   try {
       const { email, username, newPassword } = req.body;
 
-      console.log('Received signup request:', { email, username, newPassword });
+      console.log('Sign up req:', { email, username, newPassword });
 
       if (!newPassword) {
           res.status(400).json({ success: false, error: 'New password is required' });
@@ -36,8 +35,8 @@ app.post('/api/auth/signup', async (req, res) => {
 
       res.json({ success: true, user: result.rows[0] });
   } catch (error) {
-      console.error('Error signing up:', error.message);
-      res.status(500).json({ success: false, error: 'Error signing up' });
+      console.error('Error:', error.message);
+      res.status(500).json({ success: false, error: 'Error' });
   }
 });
 
@@ -65,7 +64,7 @@ app.post('/api/auth/login', async (req, res) => {
     }
 
     console.log('Login successful');
-    const token = jwt.sign({ userId: user.id, username: user.username }, 'yourSecretKey', {
+    const token = jwt.sign({ userId: user.id, username: user.username }, 'SecretKey', {
       expiresIn: '1h',
     });
 
@@ -79,23 +78,6 @@ app.post('/api/auth/login', async (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login');
 });
-
-app.post('/api/users/add', async (req, res) => {
-  try {
-      const { email, username, newPassword } = req.body;
-
-      const result = await pool.query(
-          'INSERT INTO users(email, username, password) VALUES($1, $2, $3) RETURNING *',
-          [email, username, newPassword]
-      );
-
-      res.json({ success: true, user: result.rows[0] });
-  } catch (error) {
-      console.error('Error adding user:', error.message);
-      res.status(500).json({ success: false, error: 'Error adding user' });
-  }
-});
-
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);

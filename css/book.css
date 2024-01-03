@@ -157,8 +157,8 @@ footer a button{
     color: rgb(255, 255, 255);
 }
 .dark-mode .shopping-list li {
-  background-color: #000000; /* Set your preferred background color for list items in dark mode */
-  color: #fff; /* Set your preferred text color for list items in dark mode */
+  background-color: #000000; 
+  color: #fff; 
 }
 :root {
     --light: #d8dbe0;

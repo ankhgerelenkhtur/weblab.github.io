@@ -10,12 +10,8 @@ class Movie {
   }
   
 
-  const movies = [
-
-  ]
-
-
   
+
   function kinoniHTML(movie) {
     return `
       <article>

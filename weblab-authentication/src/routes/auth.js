@@ -1,19 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const userService = require('../services/user');
+
 
 /**
  * @swagger
  * tags:
- *   name: Authentication
- *   description: Authentication and user-related endpoints
+ *   name: Auth
+ *   description: User related endpoint
  */
 
 /**
  * @swagger
  * /api/auth/signup:
  *   post:
- *     summary: Register a new user
+ *     summary: Burtgeh
  *     tags: [Authentication]
  *     requestBody:
  *       content:
@@ -43,7 +43,7 @@ router.post('/signup', userService.registerUser);
  * @swagger
  * /api/auth/login:
  *   post:
- *     summary: Authenticate a user
+ *     summary: Usershalgah
  *     tags: [Authentication]
  *     requestBody:
  *       content:

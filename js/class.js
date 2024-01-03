@@ -14,22 +14,7 @@ class Movie {
 
   ]
 
-  function kinoniHTML(movie) {
-    return `
-      <article>
-          <a href="delgerengui.html">
-              <img src="${movie.poster}" alt="${movie.title} movie poster">
-              <h3>${movie.title}</h3>
-          </a>
-          <div class="group">
-              <img class="cal" src="image/calendar.png" alt="calendar icon" width="15" height="15">
-              <a class="more" href="/delgerengui.html" aria-label="Learn more about ${movie.title}"> Дэлгэрэнгүй</a>
-              <h4>${movie.garahhugatsaa}</h4>
-              <p>Төрөл: ${movie.torol} - Үргэжлэх хугацаа: ${movie.urgeljlehhugatsaa}</p>
-          </div>
-      </article>
-    `;
-  }
+
   
   function kinoniHTML(movie) {
     return `

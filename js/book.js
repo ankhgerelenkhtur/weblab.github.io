@@ -2,324 +2,30 @@ let total = 0;
 let count = 0;
 let bookedMovies = [];
 
-
-class MovieItem extends HTMLElement {
-  constructor() {
-    super();
-    const shadowRoot = this.attachShadow({ mode: 'open' });
-    shadowRoot.innerHTML = 
-    ` <article class="movie" data-title="Movie" data-genre="ACTION" data-duration="2 цаг 30 минут" data-price="10">
-      <div class="movie-details">
-      <h3>SAW X</h3>
-      <p>Төрөл: ACTION</p>
-      <p>Үргэлжлэх хугацаа: 2 цаг 30 минут</p>
-      <p>Үнэ: 15000</p>
-      <button class="book-button" aria-label="Book Now" onclick="addToBookingCard(this)">Захиалах</button>
-    </div>
-      </article> 
-     <script> function addToBookingCard(button) {
-  const movieContainer = button.closest('movie-item');
-  if (movieContainer) {
-    count++;
-    saveToLocalStorage();
-  }
-}
-<script>
-    `;
-  }  
-}
 class BookingApp extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.innerHTML = `
       <style>
-      .booking-section {
-        margin-top: 30px;
-    }
-    body{
-    
-        color: rgb(0, 0, 0);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    footer a button{
-      position: fixed;
-      top: 0%;
-      left: 0%;
-    }
-    .booking-section h2{
-        margin-left: 50%;
-    }
-    .movie {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        margin-left: 5%;
-    }
-    
-    .movie img {
-        width: 120px;
-        height: 180px;
-        border-radius: 8px;
-        margin-right: 20px;
-        object-fit: cover;
-    }
-    
-    .movie-details {
-        flex: 1;
-    }
-    
-    .movie h3 {
-        margin: 0;
-    }
-    
-    .movie p {
-        margin: 5px 0;
-        
-    }
-    
-    .book-button {
-      display: flex;
-      width: 88px;
-      height: 30px;
-      padding: 8px 16px;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 9999px;
-      border: 0.5px solid #0B4FFE;
-      background: rgba(0, 0, 0, 0);
-      box-shadow: 0 0 0 1px #0768AF inset;
-      color: #000000;
-      text-align: center;
-      font: 12.25px Arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-    
-    .booking-card {
-        margin-top: 30px;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 10px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: none;
-      
-    }
-    .shopping-icon {
-      position: fixed;
-      top: 35px;
-      right: 100px;
-      font-size: 24px;
-      color: #3498db;
-      cursor: pointer;
-      z-index: 2; 
-    }
-    
-    .shopping-icon::before {
-      content: attr(data-count);
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background-color: red;
-      color: white;
-      border-radius: 100%;
-      padding: 3px;
-      font-size: 12px;
-    }
-    
-    .shopping-icon:hover::before {
-      background-color: #3498db; 
-    }
-    
-    .shopping-list {
-      list-style: none;
-      padding: 0;
-      margin-right: 10%;
-      z-index: 1;
-    }
-    
-    .shopping-list li {
-      margin-bottom: 5px;
-      color: #ea0000;
-      background-color: white; 
-      padding: 3px;
-    }
-    
-    .shopping-list li:hover {
-      background-color: #3498db; 
-      color: white; 
-    }
-    
-    .shopping-list li button {
-      border: none;
-      background: none;
-      cursor: pointer;
-      color: #ea0000;
-      font-weight: bold;
-    }
-    
-    .shopping-list li button:hover {
-      text-decoration: underline;
-    }
-    
-    .total-price {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-    
-    .dark-mode #bookingCard {
-      background-color: #000;
-    }
-    
-    .dark-mode #bookingCard,
-    .dark-mode #bookingCard h2,
-    .dark-mode #bookingCard ul,
-    .dark-mode #bookingCard .total-price {
-      color: #ffffff;
-    }
-    
-    .dark-mode .total-price {
-      color: black;
-      background-color: #000000;
-    }
-    .dark-mode .book-button{
-      color: white;
-    }
-    .dark-mode{
-        background: black;
-        color: rgb(255, 255, 255);
-    }
-    .dark-mode .shopping-list li {
-      background-color: #000000; 
-      color: #fff; 
-    }
-    :root {
-        --light: #d8dbe0;
-        --dark: #28292c;
-        --link: rgb(27, 129, 112);
-        --link-hover: rgb(24, 94, 82);
-      }
-    
-    .toggle-switch {
-        position: relative;
-        width: 80px;
-      }
-      
-      label {
-        position: absolute;
-        width: 100%;
-        height: 30px;
-        background-color: var(--dark);
-        border-radius: 30px;
-        cursor: pointer;
-      }
-      
-      input {
-        position: absolute;
-        display: none;
-      }
-      
-      .slider {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 50px;
-        transition: 0.3s;
-      }
-      
-      input:checked ~ .slider {
-        background-color: var(--light);
-      }
-      
-      .slider::before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 10px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        box-shadow: inset 28px -4px 0px 0px var(--light);
-        background-color: var(--dark);
-        transition: 0.3s;
-      }
-      
-      input:checked ~ .slider::before {
-        transform: translateX(40px);
-        background-color: var(--dark);
-        box-shadow: none;
-      }
-    
-      a {
-        position: relative;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        top: 150px;
-        left: 10px;
-        font-size: 10px;
-        text-decoration: none;
-        color: var(--link);
-        font-weight: bold;
-        text-align: center;
-      }
-      
-      a:hover {
-        color: var(--link-hover);
-      }
-    
-      .dark{
-        position: absolute;
-        top: 5%;
-        right: 10%;
-      }
-     
-      footer a  button {
-        border-radius: 5px;
-        border: 1px rgba(0, 56, 255, 0.17);
-        background: rgba(0, 0, 0, 0.50);
-        box-shadow: 0px 0px 0px 1px blue inset;
-        color: #fff;
-        margin-top:  20px;
-        margin-left: 20px;
-        height: 20px;
-        width: 55px;
-    }
-    .booking-card button{
-    
-      background-color: #2a2a2a;
-      color: #fff;
-      margin-top:  20px;
-      margin-left: 20px;
-      height: 20px;
-      width: 55px;
-    }
-    .movie-details{
-      border-left: 5px solid #0B4FFE;
-      padding-left: 10px;
-    }
-    .book-button:hover{
-      background-color: #0B4FFE;
-      color: white;
-    }
+          /* Add your styles here */
       </style>
       <div class="booking-card" id="bookingCard">
-        <h2>Захиалсан кинонууд</h2>
-        <ul class="shopping-list" id="bookingList"></ul>
-        <button onclick="resetBooking()">Reset</button>
-        <div class="total-price" id="totalPrice">Нийт үнэ: MNT: 0</div>
+          <h2>Захиалсан кинонууд</h2>
+          <ul class="shopping-list" id="bookingList"></ul>
+          <button onclick="resetBooking()">Reset</button>
+          <div class="total-price" id="totalPrice">Нийт үнэ: MNT: 0</div>
       </div>
       <div class="shopping-icon" data-count="0" onclick="toggleBookingCard()">🛒</div>
       <div class="dark">
-        <div class='toggle-switch'>
-          <label>
-            <input type='checkbox' onclick="darkMode()">
-            <span class='slider'></span>
-          </label>
-        </div>
+          <div class='toggle-switch'>
+              <label>
+                  <input type='checkbox' onclick="darkMode()">
+                  <span class='slider'></span>
+              </label>
+          </div>
       </div>
-    `;
+  `;
   }
 
   static get observedAttributes() {
@@ -330,8 +36,10 @@ class BookingApp extends HTMLElement {
     if (oldValue !== newValue) {
       switch (name) {
         case 'total':
+
           break;
         case 'count':
+
           break;
         case 'bookedMovies':
           break;
@@ -365,14 +73,133 @@ class BookingApp extends HTMLElement {
   }
 }
 
-customElements.define('movie-item', MovieItem);
 customElements.define('booking-app', BookingApp);
 
+function addToBookingCard(button) {
+  const movieContainer = button.closest('.movie');
+  const title = movieContainer.querySelector('h3').textContent;
+  const genre = movieContainer.querySelector('p:nth-child(2)').textContent.split(': ')[1];
+  const duration = movieContainer.querySelector('p:nth-child(3)').textContent.split(': ')[1];
+  const priceString = movieContainer.querySelector('p:nth-child(4)').textContent.split(': ')[1].replace(',', '');
+  const price = parseFloat(priceString);
 
+  total += price;
+  count++;
 
+  const shoppingIcon = document.querySelector('.shopping-icon');
+  shoppingIcon.setAttribute('data-count', count);
 
-function toggleBookingCard() {
-  const bookingCard = document.querySelector('booking-app');
-  bookingCard.style.display = bookingCard.style.display === 'block' ? 'none' : 'block';
+  const bookingList = document.getElementById('bookingList');
+  const listItem = document.createElement('li');
+  listItem.textContent = `${title} - ${genre} (${duration}) - $${price}`;
+
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'DECLINE';
+  deleteButton.onclick = () => declineBooking(title);
+
+  listItem.appendChild(deleteButton);
+
+  bookingList.appendChild(listItem);
+
+  bookedMovies.push({ title, genre, duration, price });
+
+  const totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = `Нийт үнэ: MNT ${total.toFixed(0)}`;
+
+  saveToLocalStorage();
 }
 
+function declineBooking(movieTitle) {
+
+  const movieIndex = bookedMovies.findIndex((bookedMovie) => bookedMovie.title === movieTitle);
+
+  if (movieIndex !== -1) {
+    total -= bookedMovies[movieIndex].price;
+    count--;
+
+    const shoppingIcon = document.querySelector('.shopping-icon');
+    shoppingIcon.setAttribute('data-count', count);
+
+    const bookingList = document.getElementById('bookingList');
+    bookingList.removeChild(bookingList.childNodes[movieIndex]);
+
+    const totalPriceElement = document.getElementById('totalPrice');
+    totalPriceElement.textContent = `Нийт үнэ: MNT ${total.toFixed(0)}`;
+    bookedMovies.splice(movieIndex, 1);
+    saveToLocalStorage();
+  }
+}
+
+function showBookingCard() {
+  const bookingCard = document.getElementById('bookingCard');
+  bookingCard.style.display = 'block';
+}
+
+function hideBookingCard() {
+  const bookingCard = document.getElementById('bookingCard');
+  bookingCard.style.display = 'none';
+}
+
+function toggleBookingCard() {
+  const bookingCard = document.getElementById('bookingCard');
+  if (bookingCard.style.display === 'block') {
+    hideBookingCard();
+  } else {
+    showBookingCard();
+  }
+}
+
+function resetBooking() {
+  total = 0;
+  count = 0;
+  bookedMovies = [];
+
+  const shoppingIcon = document.querySelector('.shopping-icon');
+  shoppingIcon.setAttribute('data-count', count);
+
+  const bookingList = document.getElementById('bookingList');
+  bookingList.innerHTML = '';
+
+  const totalPriceElement = document.getElementById('totalPrice');
+  totalPriceElement.textContent = `Нийт үнэ: MNT ${total.toFixed(0)}`;
+
+  saveToLocalStorage();
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem('bookingData', JSON.stringify({ total, count, bookedMovies }));
+}
+
+function loadFromLocalStorage() {
+  const savedData = localStorage.getItem('bookingData');
+  if (savedData) {
+    const { total: savedTotal, count: savedCount, bookedMovies: savedBookedMovies } = JSON.parse(savedData);
+    total = savedTotal;
+    count = savedCount;
+    bookedMovies = savedBookedMovies;
+
+    const shoppingIcon = document.querySelector('.shopping-icon');
+    shoppingIcon.setAttribute('data-count', count);
+
+    const bookingList = document.getElementById('bookingList');
+    const totalPriceElement = document.getElementById('totalPrice');
+    totalPriceElement.textContent = `Нийт үнэ: MNT ${total.toFixed(0)}`;
+
+    bookedMovies.forEach((movie) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${movie.title} - ${movie.genre} (${movie.duration}) - $${movie.price}`;
+
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'DECLINE';
+      deleteButton.onclick = () => declineBooking(movie.title);
+
+      listItem.appendChild(deleteButton);
+
+      bookingList.appendChild(listItem);
+    });
+  }
+}
+
+window.onload = function () {
+  loadFromLocalStorage();
+};
